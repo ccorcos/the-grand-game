@@ -23,7 +23,7 @@ casualties:
 CODE:
 
 -- list of unit types -> form for numbers. defense, offense, supplied and unsupplied.
-discrete random functions, weighted stuffs
+-- discrete random functions, weighted stuffs
 win lose + casualties
 
 
@@ -33,3 +33,8 @@ SAM:
 layout
 ['infantry', 'armor', 'light fleet', 'heavy fleet', 'aircraft']
 autoform with simple-schema
+
+
+DO:
+casualties
+iron router - layout, navbar, loading spinner + delay, form and results pages 

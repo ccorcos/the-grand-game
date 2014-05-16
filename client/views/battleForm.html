@@ -1,0 +1,21 @@
+<template name="battleForm">
+    <div class="container">
+        <div class="row">
+
+            {{#autoForm schema="Battle" id="battle" resetOnSuccess=false}}
+            <fieldset>
+                <legend>Epic Battle</legend>
+                <div class="col-md-6">{{> afQuickField name='attacking'}}</div>
+                <div class="col-md-6">{{> afQuickField name='defending'}}</div>
+            </fieldset>
+
+            <div class="col-md-12">
+                <div class="centered">
+                    <button type="submit" class="btn btn-primary">Fight</button>
+                </div>
+            </div>
+            {{/autoForm}}
+
+        </div>
+    </div>
+</template>

@@ -2,6 +2,7 @@
   "packages": {
     "less-bootstrap-3": {},
     "less-fontawesome-4": {},
-    "autoform": {}
+    "autoform": {},
+    "iron-router": {}
   }
 }
