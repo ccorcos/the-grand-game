@@ -1,14 +1,25 @@
 
 <template name="navbar">
-    <ul>
-        <li>
-            <a href="{{pathFor 'battleForm'}}">battleForm</a>
-        </li>
-        <li>
-            <a href="{{pathFor 'battleOutcome'}}">battleOutcome</a>
-        </li>
-        <li>
-            <a href="{{pathFor 'battleStats'}}">battleStats</a>
-        </li>
-    </ul>
+    <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand active" href="{{pathFor 'battleForm'}}">The Grand Game</a>
+          </div>
+
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">      
+              <li class=""><a href="{{pathFor 'battleForm'}}">Battle Form</a></li>
+              <li class=""><a href="{{pathFor 'battleOutcome'}}">Outcome</a></li>
+              <li class=""><a href="{{pathFor 'battleStats'}}">Statistics</a></li>
+            </ul>
+          </div>
+        </div>
+    </div> <!-- end header row -->
+
 </template>
