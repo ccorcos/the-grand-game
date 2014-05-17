@@ -4,6 +4,7 @@ Router.map(function() {
     })
     this.route('battleOutcome')
     this.route('battleStats')
+    this.route('home')
 });
 
 Router.configure({
