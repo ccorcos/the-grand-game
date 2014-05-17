@@ -161,566 +161,256 @@
 			<p>
 				The random component builds on top of the base value through “combat cards;” the combat cards also determine casualties.  When you draw a combat card, you will see three parts: (1) a number between 0 and 3 that will be added to your base combat value and (2) numbered rows indicating the number of types of casualties you inflict on your enemy and (3) a flak indicator for whether the combat destroyed any of your enemy’s aircraft in the covering air zone.
 			</p>
+			<table class="table center-table" style="width:300px;">
+				<thead>
+					<tr>
+						<th>LAND EXAMPLE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Combat Value</td>
+						<td>+2</td>
+					</tr>
+					<tr>
+						<td>Casualty</td>
+						<td>
+							<p>Armor, Infantry</p>
+							<p>Armor, Infantry</p>
+							<p>Infantry, Armor</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Flak</td>
+						<td>0 hits</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="padding-top:20px;">
+				The casualty component of the card gives you both the number and the order in which casualties are withdrawn from the game.  In this case, the combat card says to remove two armor and one infantry first.  If there are not two armor units to remove, infantry units replace them on the casualty list.  If there is not an infantry unit, an armor unit replaces it.  The casualties on your cards indicate the casualties you inflict on your enemy, not the casualties you take.
+			</p>
+			<p>
+				The combat value, casualties, and flak hits vary by card. These vary independently to some extent; you could have a card with a combat value of +0 and six casualties listed (or any other combination).  I intend the expected value for combat values to be around 1.5, the expected number of casualties to be about 2, and the expected flak hits to be around 0.125 (=1/8).
+			</p>
+			<p>
+				At a minimum, a player will always draw one combat card.  For every five points of base value you possess over 5, you draw one combat card (NB: there are some modifications to this; see the section on orders).  So, by reaching a base value of 10, a player will draw two cards, at a base value of 15 a player draws three cards, and so on.  Players sum their base value with the combat card value to get their total value; it is the total value that determines the control over the territory.  Casualties only come from the cards (but are also additive: you apply all the casualties from all the cards, unless some special rule says otherwise).
+			</p>
+			<p>
+				This describes the general combat mechanic.  There are special rules for both air-to-air and sea combat.  Furthermore, air combat adds to ground combat at the zone level; the section on air power will discuss this more in detail.  Additionally, even ground combat has three major areas of adjustment to these rules.  (1): the types of orders issued affect how ground combat operates.  (2): supply affects individual unit value.  (3): terrain bonuses also affect base value.  Lastly, there are special rules for multi-way combat.  The subsequent sections will deal with all of these modifications.
+			</p>
+			<h3>
+				Air Combat
+			</h3>
+<!-- 		Sam's proposed rules for Air Combat
+			<p> 
+				Air combat takes place in "air zones". An air zone is defined as any space within 2 land spaces or 1 sea space (excluding the space the aircraft currently occupies) of the aircraft. 
+
+				An aircraft may provide air support to more than one territory at the same time. 
+
+				When writing orders, the general must specify whether or not a territory will receive air support for the following turn. He may choose not to use his air support.
+
+				When using air support, the general is exposing his planes to enemy fighters. If both sides of a battle have air support, air combat must be resolved before combat takes place. 
+
+				Air combat is resolved with the same casualty calculator as ground and sea combat. 
+
+				After air combat is resolved, the appropriate bonuses are given to each side. For every 1 plane advantage, the side with air superiority receives +1 combat strength for every unit in his attacking/defending army.
+
+				Air superiority will not affect casualties, but will significantly affect the odds of victory. 
+			</p> -->
+			<p>
+				Air combat takes place in “air zones” as players compete for “air superiority.”  Air units do start and end the combat phase in a physical location – in a land or sea territory.  During the turn, they are assigned to the air zone covering that territory or to an adjacent air zone.  At the beginning of the combat phase, you must also list a landing place relative to the zone in which the aircraft fights: again, either that zone or an adjacent one.  Take an aircraft based somewhere in air zone A, below.  It may be assigned to A and land in A.  It can be assigned to B and land in A.  It can be assigned to B and land in air zone C.
+			</p>
+			<p>
+				You must specify a landing order for each aircraft assigned to a combat zone.  In the example above, imagine you start with two aircraft in A and assign them both to B.  If you want one to land in A and the other to land in C, you must specify which of those outcomes is a priority, in case one of the aircraft is destroyed.
+			</p>
+			<table class="table center-table" style="width:300px;">
+				<thead>
+					<tr>
+						<th>Proper Aircraft Movement Order</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Step 1:  2 Aircraft from A assigned to B</td>
+					</tr>
+					<tr>
+						<td>Step 2:  1 lands in A in territory 34</td>
+					</tr>
+					<tr>
+						<td>Step 3:  1 lands in B in territory 72</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="padding-top:20px;">
+				If the player no longer possesses the landing place, the aircraft is also destroyed.  Note that you may also just leave an aircraft in a physical territory (land or sea) as a non-participant.  To make this clear, you must issue a specific order for this.   
+			</p>
+			<p>
+				Unlike other units in the game, aircraft do not use supply.  They all fight at the lowest combat value (=1).  In each air zone, at the start of a combat phase, opposing aircraft fight each other.  Each aircraft draws an ‘air combat card’ that lists a number of casualties it inflicts on the enemy’s air power (range: 0, 1, or 2).  Then count the remaining aircraft.  The player with more aircraft has “air superiority” with a count equal to their excess aircraft.  In the event of a tie, neither side has air superiority nor gets the advantages of air power.
+			</p>
+			<p>
+				Players must decide what to do with their air superiority ex-ante.  During the orders phase, they must issue orders for each air zone of aircraft that apply throughout that zone.  You may assign your air superiority to two tasks and may split it between the two: (1) strategic bombing (2) tactical air power.  In the event that an air zone covers more than one economic zone, you must specify which economic zone you intend each point of air superiority to bomb.  For tactical air power, you need only specify a place if you intend air power alone to attack a sea territory.  Tactical air power may only attack land territories in conjunction with land units.  Nevertheless, tactical air power also applies to every land territory within the air zone.  A player with +2 air superiority from two aircraft then obtains +2 to their base value in every combat fought in that zone. 
+			</p>
+			<p>
+				For strategic bombing, a player simply rolls a d6 for each point of air superiority.  A roll of a 4 inflicts 1 point of damage; a roll of a 5 inflicts 2 points of damage; and a roll of a 6 inflicts 3 points of damage.  So, a player +3 with aircraft could potentially roll 3d6 and, if fortunate, inflict 9 points of economic damage.  Note, though, that a player must have air superiority for strategic bombing to take place.  Even if some aircraft dispatched to do strategic bombing survive, if the player does not have air superiority they are not permitted to bomb.  The theory here is that the only valuable strategic bombing came with near-complete control over the air for an extended period of time.
+			</p>
+			<p>
+				Tactical air power comes with some very strong advantages.  If combat takes place in several territories, each aircraft gets to shoot, in effect, multiple times.  Tactical air power adds to the base combat value; this means tactical air superiority can put a player over the next card-drawing threshold.  To reflect tactical air power’s ability to influence successful unit resupply, a player with air superiority removes one supply from each land territory in which combat takes place.  Furthermore, some orders types (discussed further below) interact with air superiority.
+			</p>
+			<p>
+				There are some differences between tactical air power at sea and on land.  On land, aircraft may only participate in land combat that is already otherwise occurring.  Aircraft cannot conquer territory, destroy land units on their own, or successfully defend territory on their own.  At sea, tactical aircraft may conduct their own searches and fight on their own --- even if they are also adding to other combats in that air zone.  Players must just make it clear that this is their intention.  At sea, tactical air power also has no effect on supply.
+			</p>
+			<p>
+				Lastly: a note about air casualties.  If a player controls a full economic zone within that air zone, air casualties taken at any point during the combat phase (either during the initial air combat, or from flak in the subsequent engagement) are set aside.  Those may be reconstructed at a discount at the end of the turn.  This accounts for pilots bailed-out over friendly territory, whose training makes up a large part of the cost of producing air units. 
+			</p>
+			<h3>
+				Sea Combat
+			</h3>
+			<p>
+				Sea combat, unlike land combat, does not involve “control” of sea territories.  The fleets of two opposing nations may end the season occupying the same sea territory.  You remove enemy ships by destroying them.  To destroy them, though, first you must find them.  Combat at sea takes place with two components: searching and inflicting casualties.  First players search to see if their fleets find each other.  Then they draw sea combat cards based on the combat value of their units, their air superiority, and their orders. 
+			</p>
+			<p>
+				To search: a whole fleet roles a d6 searching for a 4 or less.  In the ‘winter’ season, search is less effective: players roll on a 3 or less.  The player with air superiority (of any amount) gets a +1 to search (rolls at a 5 generally and a 4 in winter).  Combat takes place if one fleet finds the other.  If neither fleet searches successfully, no sea combat takes place.
+			</p>
+			<p>
+				Sea combat cards contain similar information as land combat cards.  At sea, though, players have three potential types of casualties: loaded light fleets, unloaded light fleets, and heavy fleets.  A “loaded” light fleet is carrying land units or supplies across a sea territory.  Light fleets can carry up to two land units and six supplies.  Heavy fleets can base up to one aircraft each and also have a six-supply capacity.  Aircraft are only lost when heavy fleets sink if, at the conclusion of the season, they have no place to land.  Fleet units all have a combat value (see the table of combat values and prices).  Unsupplied units fight at a value of 1 point.  Every fleet unit engaged in an action uses 1 supply unless modified otherwise.   
+			</p>
+			<p>
+				Sea combat cards do not contain point modifiers for territory control: they only contain casualty lists and flak hits.  Unlike on land, a player may order their air superiority to fight alone at sea – to search and to draw cards independently of sea units.  Just as on land, players draw one card for every 5 points of base value (unless modified by a special order).  Players draw a minimum of one card.  Generally speaking every card should generate roughly an average of one hit and about 0.125 flak hits.  Aircraft hits are merely tallied at this point, since those aircraft may fight in multiple sea or land territories.  Once air combat determines air supremacy, that modifier lasts throughout the season.
+			</p>
+			<table class="table center-table" style="width:400px;">
+				<thead>
+					<tr>
+						<th>SEA EXAMPLE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Casualty</td>
+						<td>
+							<p>Light Fleet, Heavy Fleet, Loaded LF</p>
+							<p>Light Fleet, Heavy Fleet, Loaded LF</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Flak</td>
+						<td>1 hit</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="padding-top:20px;">
+				Combat at sea also includes orders.  Rather than just issuing “move” orders to ships, players choose between these three orders:
+			</p>
+			<ul>
+				<li><em>Hide:</em> The fleet does not search.  Regardless of what your opponent’s combat cards say, loaded Light Fleets are taken as casualties only if there are no other available casualties.  Your units use no more than one supply per enemy unit you destroy, up to a total of one supply for each of your units involved.  Additionally, draw only one combat card for every seven base points rather than every five. </li>
+				<li><em>Patrol:</em> no modifications to the combat mechanic.</li>
+				<li><em>Engage:</em> Fleet commits to the engagement at all hazards.  If one player selects engage, and one side successfully searches, every heavy fleet on both sides draws one extra sea combat card.</li>
+			</ul>
+			<p>
+				In addition, of course, players must specify where their ship units move.
+			</p>
+			<p>
+				Sea units may move one sea territory per season.  A correct order either will list which units stay in place (with a command for that territory) or a pair (where from, where to) of territories that fully describe the movement.  The only complicated part of sea movement involves ports.  Ships are built in ports – land territories that may house friendly sea units.  Sailing out of a port costs one unit of movement, as does sailing in to a port.  There are some special rules for combat in ports, though.
+			</p>
+			<p>
+				A player may attack into a hostile port with sea units but may not conquer it.  At the conclusion of the combat, the attacking units are returned to the adjacent sea zone and coexist with whatever may be there.  Combat in a port automatically triggers ‘engage’ for both sides; for the defender, though, each light fleet also draws an additional card.  Furthermore, the port itself draws a card.  Thus, attacking into ports is a costly and inadvisable business (unless some alternative special rule intervenes).
+			</p>
+			<p>
+				Sea combat does contain an economic component.  While sea territories yield no economic value, and are not possessed by any individual player, nations can be expected to guard their own coastline to prevent an effective blockade of their trading centers.  A player wishing to do economic damage to an opponent’s seaside economic zone must indicate a willingness to do so by: ordering a unit to a sea territory adjacent to the land territory with a special order modification (“attack shipping”).  If the unit survives that combat phase, a token is placed in that territory to indicate successful interdiction for one turn.  The attacker must successfully put another unit in that sea territory with an “attack shipping” order in the subsequent combat phase (note: this may span turns) to complete the damage.  The token is then removed from the board and the adjacent economic zone (if multiple, the target must have been specified in advance; you only get one) takes 1 point of damage.
+			</p>
+			<h3>
+				Land Combat
+			</h3>
+			<p>
+				Land combat uses the general combat system described earlier.  Each side computes its base power, adds any air supremacy, draws combat cards, and then computes control and casualties.  This section describes the modifiers: the way terrain affects base combat value, land movement and railroads, loading and unloading transports, and the available orders.
+			</p>
+			<p>
+				There are really two types of terrain modifiers: ones that add points to the defensive base combat value and ones that restrict the number of cards an attacker may draw.  Cities, Ports, and Mountains all add +1 to each defending land unit’s base combat value.  Additionally the winter season adds a +1 to each defender.  Rivers, Canals, and Shoreline work differently.  An attacker has to count their base combat value separately for how many combat cards he draws; the part of his force attacking over the obstacle draws combat cards at a different rate (per 10pts over rivers; per 12 points over canals; and per 15 points across shoreline).  For example, an attacker with 15 points attacking from an adjacent land territory and an additional 15 points landing from ships would have a total base value of 30 and draw 3 cards from the land component and only 1 card from the seaward component.
+			</p>
+			<p>
+				Railroads modify movement range rather than combat value.  Land units typically may move one land territory per turn.  However, a unit which starts on a railroad territory (or a city or port with a railroad attached) may move any number of spaces along the railway and end at any point along that railway – so long as the player either controls all of those railroad territories or obtains written permission on the other person’s order sheet to use them.  This may be best explained through an example:
+			</p>
+			<p>
+				 imagine a string of territories: A, B, C, D, and E
+			</p>
+			<p>
+				The railroad runs from B through C to D.  What can move where and when?
+			</p>
+			<p>
+				If a unit starts in B, and the player controls C and D, the player may simply order the unit to move from B to D.  Railroad orders occur ‘before’ other movement, so if some other player attempts to cut the rail line at space C the units on this turn still make it to D.  However, if the unit starts at A instead, it must first move to B during one combat season before using the railroad.  Furthermore, if an enemy were to occupy D and refuse permission for the rail movement, a unit that starts at B could go no further than C.  Additionally, a unit at B taking the railway must end at D and take another combat season to get to E.  In sum: (1) rail movements happen before other movements when resolving orders; (2) to use a railway you must start on it; (3) if you use the railway, you must end on it; (4) if some other player occupies part of your path you must obtain written permission to use “their” railway.
+			</p>
+			<p>
+				Railway permissions require some additional rules to prevent abuse.  A player may write any type of permission (e.g., “Jeff may use my railways” or “Jeff may move three infantry across this specific set of railways.”).  However, the rail permissions must accommodate the rail order as a whole; if the permission does not grant the full order, none of the order is executed and the units travel as far along the railroad as possible.  For example, if I give Jeff permission to cross my territory with 3 units and Jeff issues an order for 4 units, all 4 units stop at the last territory on the railway that Jeff controls.  If Jeff only orders 2 units, both pass because my order will accommodate them.  Note that the permission only applies to movement and not to order type.  So, for example, if you consent to it, I can order an entire army to your main city – and order them to attack.
+			</p>
+			<p>
+				Railroads generate one other issue: “planes on trains.”  Aircraft typically get around the map my moving to an air zone, contending for air superiority, and then moving on to a landing place.  This gives them a relatively large operational radius.  Nevertheless, their “landing” place is a physical land or sea territory.  Aircraft which start on a land territory that contains a railroad may be transported by railroad to another land territory as with any other land unit.  However, when they arrive at their destination, they may not fight.  So you can pack them in crates and dispatch them by rail around the map.  This is a bit out of sync with the rule that prohibits you from putting them in light fleets; what distinguishes these rules, though, is the multi-season nature of sea combat and the instantaneous, single-season nature of land combat.  It is just too difficult to deal with the at-sea accounting.
+			</p>
+			<p>
+				Land units and supplies may move by ship, though.  Units may load and unload from any territory adjacent to a sea territory.  If crossing territorial borders, loading and unloading takes one full season for the units and the ships.  That means the ship must already be in the sea territory and the land unit already adjacent to that zone for the loading to take place; unloading takes a unit’s full movement and must be done by a ship already next to the shore.  The exception here is loading and unloading in ports; this happens ‘for free’: you may load a unit in a port and then dispatch the ship to sea on the same season or sail into a port and unload a unit on the same turn.
+			</p>
+			<p>
+				In addition to all of these other considerations, land units have the most order choices, split into defensive and offensive order types.  A player counts as the defender if he owns the territory or is on the territory at the permission of its owner (per existing written orders to that effect).  These are the orders:
+			</p>
+			<p>
+				<strong>Defensive</strong>
+			</p>
+			<ul>
+				<li>Screen:  You draw one combat card for every ten base points (with a minimum of one).  You only spend supply equal to the number of enemy units you destroy.  You also always lose infantry units before armor units and may specify a land territory as the retreat destination for both units and remaining supplies.  </li>
+				<li>Defend: Regular rules.  You may designate a land territory as the retreat destination for units but not supplies.  </li>
+				<li>Hold:  You draw one combat card for every three base points.  No units or supplies may retreat; if you lose the territory, you lose everything.  </li>		
+			</ul>
+			<p>
+				<strong>Offensive</strong>
+			</p>
+			<ul>
+				<li>Scout: You draw one combat card for every ten base points (with a minimum of one).  You spend supply equal to the number of enemy units you destroy.  If you are unsuccessful in conquering the territory, your remaining supply retreats with your units (you must have specified a retreat territory in advance).  </li>
+				<li>Advance: Regular rules.  You may designate a land territory as a retreat destination – but if you do not conquer the territory, you lose any supply sent to that space beyond what you used in combat.  Each unit consumes one supply in combat.  </li>
+				<li>Blitzkrieg:  If you have air superiority, you draw one additional combat card for every armor and air-superiority-point pair you have in the territory.  For example, if you have +3 air superiority and three armor units, you would draw three additional cards.  If you do not have air superiority, the defender draws an extra card for every point of air superiority they possess.  Blitzkrieg requires the payment of one additional supply per unit to count them as fully supplied.     </li>
+			</ul>
+			<p>
+				As mentioned earlier, land combat takes place with two components: a total score that determines control and the casualties printed on the combat cards.  The casualties are not completely divorced from the control issue, though.  To conquer a territory, you must have some land unit (infantry or armor, not aircraft or supply) left to use to occupy it.  To successfully defend a territory, if your opponent has any remaining units, you must have at least one surviving defender (infantry or armor, not aircraft or supply).  In the event both sides are entirely destroyed, the defender retains control of the territory.
+			</p>
+			<h3>
+				Multi-Way Combat
+			</h3>
+			<p>
+				It may come to pass that units from multiple countries fight in an uncoordinated fashion for control of a sea or land territory.  This requires a few adjustments to the rules.  Each player “fights” each other player in a pairwise combat at full strength.  Losses are removed from each individual paired combat (so, for example, if in two separate combats I am to lose 1 unit and 2 units, I lose in total 3 units).  For land combat, the country with surviving units and with the highest total value occupies the territory.
+			</p>
+			<h3>
+				Base Combat Value and Cost
+			</h3>
+			<table class="table center-table" style="width:300px;">
+				<thead>
+					<tr>
+						<th>Proper Aircraft Movement Order</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Step 1:  2 Aircraft from A assigned to B</td>
+					</tr>
+					<tr>
+						<td>Step 2:  1 lands in A in territory 34</td>
+					</tr>
+					<tr>
+						<td>Step 3:  1 lands in B in territory 72</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="padding-top:20px;">
+
+			</p>
+
+
+
+
 		</div>
-<!-- 
 
-     
-	Air combat will work completely differently than it did in earlier games.  Essentially, air power will serve as a modifier in all the territories in the “air zones” in which it is deployed.  In resolving conflict during a fighting season, first players will determine who has control of the air in which zones and then move on to resolving combats.  While this does add time to combat resolution, it should dramatically shorten the complexity of the order-writing and more seamlessly integrate economic warfare (strategic bombing) with territorial warfare.  As I think appropriate for the period (roughly, 1920-1950) modeled, air power should play a large role and players will focus on gaining ‘air supremacy’ over large areas.
-	Players will also get more out of politics.  Players will still spend at a few different levels (10% increments of their GDP) on politics and receive outcomes at the end of the year.  Players will now draw from a deck of cards (the 10% deck, for example) and obtain their outcome.  Not all the outcomes will be bad.  Some may contain bonuses.  Others will contain restrictions, conditional rewards, and so on.  It will still be true that the more you spend the more likely you will be to obtain a good outcome.  The outcomes will vary by regime type (players will pick “dictatorship” or “democracy”) and the two types will pick from different decks.  The dictatorship deck focuses more on issues of stability and control.  The democracy deck focuses more on freedom of tactical and strategic choice.  Additionally, political spending generates “in-game cash.”  The more you spend on politics, the more in-game cash you generate each turn.  
-	The “in-game cash” changes both the ability of players to buy-and-trade in-game objects as well as the way players collect payoffs at the end of the game.  Your payoff at the end of the game is now a function of how much in-game cash you acquired.  The last turn will generate a large payout of in-game cash based on the final position of the board, so it will still be true that players will want to end in as strong of a position as they can.  Nevertheless, actions throughout the game will contribute to the final score.  This deserves a longer theoretical explanation (rather than just a mechanical one, as I will present in the rest of the rules).  I think the in-game cash will solve two major problems with previous editions of the game.  
-	First, the in-game cash provides a measure of whole-game performance.  I want a model where players behave as if they were previously infinitely-lived and that they will be infinitely-lived into the future.  While that is obviously not possible in a board game, I can at least try to smooth out the game-ending distortions.  Providing a real payoff for “we had a good year this year” gets part of the way towards that outcome.  With the in-game cash, a player can “turtle” and develop and… actually have a relatively successful game.  The player can also use that cash to do, in effect, ‘soft’ foreign policy.
-	Second, the in-game cash solves the “buyout” problem.  Each country should only possess some amount of real capabilities to pay off the leaders of other nations.  In older versions of the game, a player had in essence no budget constraint: Belgium could offer enough money to the leaders of Germany, France, England, and Russia to literally buy them all simultaneously.  With transactions limited to in-game cash, players in the early game may only be able to buy very small objects (say, a handful of supplies) because they simply do not have the cash to reach the expected payoff value of any country – what they would need to buy the whole country.  Later in the game, a player may have accumulated enough cash to buy out one or even two players – but it is very unlikely that someone will have acquired enough cash to buy out the whole table by turn 6.
-	So, as you see, most of the game has changed.  All of those ‘core concepts’ no longer apply.  I think the new game will actually be a better model of what I had in mind, though.  I don’t view these as ‘sacrifices for playability.’  The new game sounds to me like it should be more fun and a better simulation.  I hope that after you read the new rules in this document that you will be as excited to play the new game as I am.  
 
-J. Andrew Sinclair		
-	17 March 2014		  
-	     
- 
-	  
-
-The Board
 
-	The game board in this edition contains several different types of boundaries and two terrain types: land and sea territories.  Additionally, there are some modifiers that apply to certain territories that give them special properties: cities, ports, railroads, mountains, major rivers, shoreline, and canals.  Sea territories are relatively large compared to land territories and also have slightly different properties as well.  
-	
-These are the boundary types:
 
-Air Zones: this is the level of aggregation at which air combat takes place.
-Economic Zones: these are collections of land (plain and mountain) territories; economic development takes place at the zone level rather than at the territory level.
-National Borders: these define the areas possessed by each nation at the beginning of the game and may cut across air and economic zones.  
 
-	The game board will be divided up into some number of countries (generally about twelve, although there may be other map variants used).  Half of these will be “large” countries that contain something on the order of 12-18 land territories.  The other half will be “small” countries that have between 5-8 land territories.  For the sake of playability, depending on the number of participants, some of the small countries may be joined together before the country selection process begins.  Not all countries need to be claimed for the game to operate; these rules contain extensive provisions for neutral countries.
-	While the exact details will vary by country and by map, generally each economic zone will contain 4-6 land territories.  Players either have “full”, “partial,” or “no” control over an economic zone.  To have full control, a player must possess all of the land territories in that zone.  To have partial control, the player must possess at least 51% of the land territories.  Not all zones will necessarily be controlled by a player at all times; furthermore, players typically will begin with partial control over some zones rather than full control.    
-	Air zones have their own borders and may include both sea and land territories.  These represent areas in which the players may contend for air control.  Air control works very differently in this version of the game than in the previous variants.  The player with air supremacy may then apply a modifier to every (land and sea) territory in that air zone. 
 
-These are the territory modifiers:
-Cities:  These are your production centers; they produce land units, air units, and supplies.  Additionally, territories with cities get a defensive bonus (for a list of bonuses, see the combat section).  
-Ports:  Ports are just cities that can also build ships.  They too have a defensive bonus.
-Railroads:  Railroads allow you to move units more quickly around the map.  Railroads are owned by the player owning the land territory.  For operational details, see the section on military orders and movement.    
-Mountains:  Mountains provide a defensive bonus (see the bonus list in the combat section).  
-Rivers:  Rivers provide a directional defensive bonus that applies against an army attacking over the river.  
-Shoreline: Shoreline provides a directional defensive bonus against a landing army.
-Canals:  Canals provide the river directional defensive bonus and act as a “ship railroad.”  As long as a player possesses (or obtains permission from the owner of) the canal, the player may pass ships through it from one sea territory to another.
 
-	The territory modifiers work together and generate what I view as the appropriate ‘defense-offense’ balance.  The attacker has the advantage of choosing the place and concentrating their forces; the defense gains advantages from the terrain, short supply lines, and interior supply lines.  Each of these types of terrain modifiers will be discussed more extensively in the section of the rules which their modifications affect.
-
-The Turn
-
-	Each turn consists of three phases: allocation, combat, and reconciliation.  During the allocation phase, players place orders for how to use their GDP.  The combat phase involves moving units in each of the three seasons: spring, fall, and winter.  In the reconciliation phase players obtain political outcomes, receive production ordered during the allocation phase, and may buy or sell objects using the “in-game cash.”   
-
-Allocation
-	
-	In the allocation phase, players take their total GDP and use it to purchase several different types of goods.  You may not “roll-over” GDP into the future: productive capacity not used is lost.  Additionally, you may not buy, sell, or trade GDP.  Here is the list of all the types of items players may purchase with their GDP:
-
-GDP may be allocated to:
-Politics.  This is done in four increments: 0%, 10%, 20%, 30% of GDP.  Your political spending will also affect your income in Francs.  See the detailed section on politics and in-game cash later in the rulebook.  You do not need to specify a place with this purchase; it occurs entirely off-board.  
-GDP development.  You must assign this to particular economic zones.  As you buy more, it becomes more expensive.    
-Atomic research.  At the end of the game, you will have a probability of developing the bomb based on the share of the world’s atomic research you possess.  Atomic research gets more expensive as the game progresses.  You do not need to specify a particular place to produce the atomic research.  
-Military Units & Supplies.  You may purchase: aircraft, infantry, armor, light fleets, heavy fleets, and supplies.  All of these must be assigned to a city or port for production.  Prices and capabilities will be listed elsewhere.  
-
-	Each player prepares their allocation simultaneously.  Allocations are private knowledge until the reconciliation phase, at which point all aspects of the allocation are revealed.  The allocation phase will take place with a strict time limit; all players must complete their allocation within that amount of time and submit it via whatever process the players have agreed to in advance.  
-
-Combat 
-
-	Each combat season – Spring, Fall, Winter – has its own simultaneously executed parts.  Players write orders, submit them before a time limit, and then some player will read and execute the orders.  Within order resolution, air combat takes place first, sea combat next, ground combat last, and then any further air casualties are removed.  Players will typically have a short period of time (perhaps seven or eight minutes) to write their orders.  After the three combat seasons are complete, the reconciliation phase begins.
-
-Reconciliation
-
-	The reconciliation phase does not include any strategic elements.  Players first draw their political fate from the politics card decks.  Next they place the units and supplies that they ordered, update their GDP, and record their atomic research.  Last, players may buy and sell objects using their available budget in Francs.   
-
-
-Combat
-
-	The game uses a mixed combat system: while it has random components, the outcomes are not wholly random.  It is possible, for example, for one force of very great size to defeat a force of very small size with complete certainty.  Nevertheless, the ‘random’ components will still be quite meaningful, both for the casualties taken by each side and the ultimate control of land territories.  Territorial control and casualties are computed separately.  These next paragraphs describe the system in general; subsequently, I will note the (many) special rules.  
-	Units have “combat values” (infantry and armor have different values for attack and defense, as well).  In a combat, each player sums up the combat value of their participating units to generate their base value (e.g., “I have a value of 11.”).  The basic principle is if I have a higher total value than you do (e.g., “11>6”) then I win control over the territory.  Ties go to the defender.  The non-random component of combat comes from these “base values.”  If my force is worth more than yours, I have a higher base value, and an advantage in combat.
-	The random component builds on top of the base value through “combat cards;” the combat cards also determine casualties.  When you draw a combat card, you will see three parts: (1) a number between 0 and 3 that will be added to your base combat value and (2) numbered rows indicating the number of types of casualties you inflict on your enemy and (3) a flak indicator for whether the combat destroyed any of your enemy’s aircraft in the covering air zone.  
-
-		LAND EXAMPLE:
-			Combat Value: +2
-			Casualty:	Armor, Infantry   
-					Armor, Infantry
-					Infantry, Armor
-			Flak: 		0 hits
-
-The casualty component of the card gives you both the number and the order in which casualties are withdrawn from the game.  In this case, the combat card says to remove two armor and one infantry first.  If there are not two armor units to remove, infantry units replace them on the casualty list.  If there is not an infantry unit, an armor unit replaces it.  The casualties on your cards indicate the casualties you inflict on your enemy, not the casualties you take.
-	The combat value, casualties, and flak hits vary by card.  These vary independently to some extent; you could have a card with a combat value of +0 and six casualties listed (or any other combination).  I intend the expected value for combat values to be around 1.5, the expected number of casualties to be about 2, and the expected flak hits to be around 0.125 (=1/8).   
-	At a minimum, a player will always draw one combat card.  For every five points of base value you possess over 5, you draw one combat card (NB: there are some modifications to this; see the section on orders).  So, by reaching a base value of 10, a player will draw two cards, at a base value of 15 a player draws three cards, and so on.  Players sum their base value with the combat card value to get their total value; it is the total value that determines the control over the territory.  Casualties only come from the cards (but are also additive: you apply all the casualties from all the cards, unless some special rule says otherwise).     
-	This describes the general combat mechanic.  There are special rules for both air-to-air and sea combat.  Furthermore, air combat adds to ground combat at the zone level; the section on air power will discuss this more in detail.  Additionally, even ground combat has three major areas of adjustment to these rules.  (1): the types of orders issued affect how ground combat operates.  (2): supply affects individual unit value.  (3): terrain bonuses also affect base value.  Lastly, there are special rules for multi-way combat.  The subsequent sections will deal with all of these modifications.
-
-	Air Combat
-
-	Air combat takes place in “air zones” as players compete for “air superiority.”  Air units do start and end the combat phase in a physical location – in a land or sea territory.  During the turn, they are assigned to the air zone covering that territory or to an adjacent air zone.  At the beginning of the combat phase, you must also list a landing place relative to the zone in which the aircraft fights: again, either that zone or an adjacent one.  Take an aircraft based somewhere in air zone A, below.  It may be assigned to A and land in A.  It can be assigned to B and land in A.  It can be assigned to B and land in air zone C.  
-
-A	B	C
-
-You must specify a landing order for each aircraft assigned to a combat zone.  In the example above, imagine you start with two aircraft in A and assign them both to B.  If you want one to land in A and the other to land in C, you must specify which of those outcomes is a priority, in case one of the aircraft is destroyed.  
-Proper Aircraft Movement Order:
-			2 Aircraft from A assigned to B.
-					1 lands in A in territory 34
-				Then	1 lands in B in territory 72
-If the player no longer possesses the landing place, the aircraft is also destroyed.  Note that you may also just leave an aircraft in a physical territory (land or sea) as a non-participant.  To make this clear, you must issue a specific order for this.   
-	Unlike other units in the game, aircraft do not use supply.  They all fight at the lowest combat value (=1).  In each air zone, at the start of a combat phase, opposing aircraft fight each other.  Each aircraft draws an ‘air combat card’ that lists a number of casualties it inflicts on the enemy’s air power (range: 0, 1, or 2).  Then count the remaining aircraft.  The player with more aircraft has “air superiority” with a count equal to their excess aircraft.  In the event of a tie, neither side has air superiority nor gets the advantages of air power.
-	Players must decide what to do with their air superiority ex-ante.  During the orders phase, they must issue orders for each air zone of aircraft that apply throughout that zone.  You may assign your air superiority to two tasks & may split it between the two: (1) strategic bombing (2) tactical air power.  In the event that an air zone covers more than one economic zone, you must specify which economic zone you intend each point of air superiority to bomb.  For tactical air power, you need only specify a place if you intend air power alone to attack a sea territory.  Tactical air power may only attack land territories in conjunction with land units.  Nevertheless, tactical air power also applies to every land territory within the air zone.  A player with +2 air superiority from two aircraft then obtains +2 to their base value in every combat fought in that zone.  
-	For strategic bombing, a player simply rolls a d6 for each point of air superiority.  A roll of a 4 inflicts 1 point of damage; a roll of a 5 inflicts 2 points of damage; and a roll of a 6 inflicts 3 points of damage.  So, a player +3 with aircraft could potentially roll 3d6 and, if fortunate, inflict 9 points of economic damage.  Note, though, that a player must have air superiority for strategic bombing to take place.  Even if some aircraft dispatched to do strategic bombing survive, if the player does not have air superiority they are not permitted to bomb.  The theory here is that the only valuable strategic bombing came with near-complete control over the air for an extended period of time.  
-	Tactical air power comes with some very strong advantages.  If combat takes place in several territories, each aircraft gets to shoot, in effect, multiple times.  Tactical air power adds to the base combat value; this means tactical air superiority can put a player over the next card-drawing threshold.  To reflect tactical air power’s ability to influence successful unit resupply, a player with air superiority removes one supply from each land territory in which combat takes place.  Furthermore, some orders types (discussed further below) interact with air superiority.  
-	There are some differences between tactical air power at sea and on land.  On land, aircraft may only participate in land combat that is already otherwise occurring.  Aircraft cannot conquer territory, destroy land units on their own, or successfully defend territory on their own.  At sea, tactical aircraft may conduct their own searches and fight on their own - even if they are also adding to other combats in that air zone.  Players must just make it clear that this is their intention.  At sea, tactical air power also has no effect on supply.  
-	Lastly: a note about air casualties.  If a player controls a full economic zone within that air zone, air casualties taken at any point during the combat phase (either during the initial air combat, or from flak in the subsequent engagement) are set aside.  Those may be reconstructed at a discount at the end of the turn.  This accounts for pilots bailed-out over friendly territory, whose training makes up a large part of the cost of producing air units.       
-
-	Sea Combat
-
-	Sea combat, unlike land combat, does not involve “control” of sea territories.  The fleets of two opposing nations may end the season occupying the same sea territory.  You remove enemy ships by destroying them.  To destroy them, though, first you must find them.  Combat at sea takes place with two components: searching and inflicting casualties.  First players search to see if their fleets find each other.  Then they draw sea combat cards based on the combat value of their units, their air superiority, and their orders.  
-	To search: a whole fleet roles a d6 searching for a 4 or less.  In the ‘winter’ season, search is less effective: players roll on a 3 or less.  The player with air superiority (of any amount) gets a +1 to search (rolls at a 5 generally and a 4 in winter).  Combat takes place if one fleet finds the other.  If neither fleet searches successfully, no sea combat takes place.
-	Sea combat cards contain similar information as land combat cards.  At sea, though, players have three potential types of casualties: loaded light fleets, unloaded light fleets, and heavy fleets.  A “loaded” light fleet is carrying land units or supplies across a sea territory.  Light fleets can carry up to two land units and six supplies.  Heavy fleets can base up to one aircraft each and also have a six-supply capacity.  Aircraft are only lost when heavy fleets sink if, at the conclusion of the season, they have no place to land.  Fleet units all have a combat value (see the table of combat values & prices).  Unsupplied units fight at a value of 1 point.  Every fleet unit engaged in an action uses 1 supply unless modified otherwise.    
-	Sea combat cards do not contain point modifiers for territory control: they only contain casualty lists and flak hits.  Unlike on land, a player may order their air superiority to fight alone at sea – to search and to draw cards independently of sea units.  Just as on land, players draw one card for every 5 points of base value (unless modified by a special order).  Players draw a minimum of one card.  Generally speaking every card should generate roughly an average of one hit and about 0.125 flak hits.  Aircraft hits are merely tallied at this point, since those aircraft may fight in multiple sea or land territories.  Once air combat determines air supremacy, that modifier lasts throughout the season.   
-		SEA COMBAT CARD EXAMPLE:
-			Casualty:	Light Fleet, Heavy Fleet, Loaded LF
-					Light Fleet, Heavy Fleet, Loaded LF 
-			Flak: 		1 hits
-
-          	Combat at sea also includes orders.  Rather than just issuing “move” orders to ships, players choose between these three orders:
-Hide: The fleet does not search.  Regardless of what your opponent’s combat cards say, loaded Light Fleets are taken as casualties only if there are no other available casualties.  Your units use no more than one supply per enemy unit you destroy, up to a total of one supply for each of your units involved.  Additionally, draw only one combat card for every seven base points rather than every five.  
-Patrol: no modifications to the combat mechanic.  
-Engage: Fleet commits to the engagement at all hazards.  If one player selects engage, and one side successfully searches, every heavy fleet on both sides draws one extra sea combat card.     
-  In addition, of course, players must specify where their ship units move.
-	Sea units may move one sea territory per season.  A correct order either will list which units stay in place (with a command for that territory) or a pair (where from, where to) of territories that fully describe the movement.  The only complicated part of sea movement involves ports.  Ships are built in ports – land territories that may house friendly sea units.  Sailing out of a port costs one unit of movement, as does sailing in to a port.  There are some special rules for combat in ports, though.
-	A player may attack into a hostile port with sea units but may not conquer it.  At the conclusion of the combat, the attacking units are returned to the adjacent sea zone and coexist with whatever may be there.  Combat in a port automatically triggers ‘engage’ for both sides; for the defender, though, each light fleet also draws an additional card.  Furthermore, the port itself draws a card.  Thus, attacking into ports is a costly and inadvisable business (unless some alternative special rule intervenes).     
-	Sea combat does contain an economic component.  While sea territories yield no economic value, and are not possessed by any individual player, nations can be expected to guard their own coastline to prevent an effective blockade of their trading centers.  A player wishing to do economic damage to an opponent’s seaside economic zone must indicate a willingness to do so by: ordering a unit to a sea territory adjacent to the land territory with a special order modification (“attack shipping”).  If the unit survives that combat phase, a token is placed in that territory to indicate successful interdiction for one turn.  The attacker must successfully put another unit in that sea territory with an “attack shipping” order in the subsequent combat phase (note: this may span turns) to complete the damage.  The token is then removed from the board and the adjacent economic zone (if multiple, the target must have been specified in advance; you only get one) takes 1 point of damage.   
-
-	Land Combat
-
-	Land combat uses the general combat system described earlier.  Each side computes its base power, adds any air supremacy, draws combat cards, and then computes control and casualties.  This section describes the modifiers: the way terrain affects base combat value, land movement and railroads, loading and unloading transports, and the available orders.  
-	There are really two types of terrain modifiers: ones that add points to the defensive base combat value and ones that restrict the number of cards an attacker may draw.  Cities, Ports, and Mountains all add +1 to each defending land unit’s base combat value.  Additionally the winter season adds a +1 to each defender.  Rivers, Canals, and Shoreline work differently.  An attacker has to count their base combat value separately for how many combat cards he draws; the part of his force attacking over the obstacle draws combat cards at a different rate (per 10pts over rivers; per 12 points over canals; and per 15 points across shoreline).  For example, an attacker with 15 points attacking from an adjacent land territory and an additional 15 points landing from ships would have a total base value of 30 and draw 3 cards from the land component and only 1 card from the seaward component.
-	Railroads modify movement range rather than combat value.  Land units typically may move one land territory per turn.  However, a unit which starts on a railroad territory (or a city or port with a railroad attached) may move any number of spaces along the railway and end at any point along that railway – so long as the player either controls all of those railroad territories or obtains written permission on the other person’s order sheet to use them.  This may be best explained through an example: imagine a string of territories:
-
-A	B	C	D	E
-
-The railroad runs from B through C to D.  What can move where and when?
-	If a unit starts in B, and the player controls C and D, the player may simply order the unit to move from B to D.  Railroad orders occur ‘before’ other movement, so if some other player attempts to cut the rail line at space C the units on this turn still make it to D.  However, if the unit starts at A instead, it must first move to B during one combat season before using the railroad.  Furthermore, if an enemy were to occupy D and refuse permission for the rail movement, a unit that starts at B could go no further than C.  Additionally, a unit at B taking the railway must end at D and take another combat season to get to E.  In sum: (1) rail movements happen before other movements when resolving orders; (2) to use a railway you must start on it; (3) if you use the railway, you must end on it; (4) if some other player occupies part of your path you must obtain written permission to use “their” railway.
-	Railway permissions require some additional rules to prevent abuse.  A player may write any type of permission (e.g., “Jeff may use my railways” or “Jeff may move three infantry across this specific set of railways.”).  However, the rail permissions must accommodate the rail order as a whole; if the permission does not grant the full order, none of the order is executed and the units travel as far along the railroad as possible.  For example, if I give Jeff permission to cross my territory with 3 units and Jeff issues an order for 4 units, all 4 units stop at the last territory on the railway that Jeff controls.  If Jeff only orders 2 units, both pass because my order will accommodate them.  Note that the permission only applies to movement and not to order type.  So, for example, if you consent to it, I can order an entire army to your main city – and order them to attack.      
-	Railroads generate one other issue: “planes on trains.”  Aircraft typically get around the map my moving to an air zone, contending for air superiority, and then moving on to a landing place.  This gives them a relatively large operational radius.  Nevertheless, their “landing” place is a physical land or sea territory.  Aircraft which start on a land territory that contains a railroad may be transported by railroad to another land territory as with any other land unit.  However, when they arrive at their destination, they may not fight.  So you can pack them in crates and dispatch them by rail around the map.  This is a bit out of sync with the rule that prohibits you from putting them in light fleets; what distinguishes these rules, though, is the multi-season nature of sea combat and the instantaneous, single-season nature of land combat.  It is just too difficult to deal with the at-sea accounting.   
-	Land units and supplies may move by ship, though.  Units may load and unload from any territory adjacent to a sea territory.  If crossing territorial borders, loading and unloading takes one full season for the units and the ships.  That means the ship must already be in the sea territory and the land unit already adjacent to that zone for the loading to take place; unloading takes a unit’s full movement and must be done by a ship already next to the shore.  The exception here is loading & unloading in ports; this happens ‘for free’: you may load a unit in a port and then dispatch the ship to sea on the same season or sail into a port and unload a unit on the same turn. 
-	In addition to all of these other considerations, land units have the most order choices, split into defensive and offensive order types.  A player counts as the defender if he owns the territory or is on the territory at the permission of its owner (per existing written orders to that effect).  These are the orders:
-
-	Defensive
-Screen:  You draw one combat card for every ten base points (with a minimum of one).  You only spend supply equal to the number of enemy units you destroy.  You also always lose infantry units before armor units and may specify a land territory as the retreat destination for both units & remaining supplies.  
-Defend: Regular rules.  You may designate a land territory as the retreat destination for units but not supplies.  
-Hold:  You draw one combat card for every three base points.  No units or supplies may retreat; if you lose the territory, you lose everything.  
-
-	Offensive
-Scout: You draw one combat card for every ten base points (with a minimum of one).  You spend supply equal to the number of enemy units you destroy.  If you are unsuccessful in conquering the territory, your remaining supply retreats with your units (you must have specified a retreat territory in advance).  
-Advance: Regular rules.  You may designate a land territory as a retreat destination – but if you do not conquer the territory, you lose any supply sent to that space beyond what you used in combat.  Each unit consumes one supply in combat.  
-Blitzkrieg:  If you have air superiority, you draw one additional combat card for every armor & air-superiority-point pair you have in the territory.  For example, if you have +3 air superiority and three armor units, you would draw three additional cards.  If you do not have air superiority, the defender draws an extra card for every point of air superiority they possess.  Blitzkrieg requires the payment of one additional supply per unit to count them as fully supplied.                 
-
-As mentioned earlier, land combat takes place with two components: a total score that determines control and the casualties printed on the combat cards.  The casualties are not completely divorced from the control issue, though.  To conquer a territory, you must have some land unit (infantry or armor, not aircraft or supply) left to use to occupy it.  To successfully defend a territory, if your opponent has any remaining units, you must have at least one surviving defender (infantry or armor, not aircraft or supply).  In the event both sides are entirely destroyed, the defender retains control of the territory.  
-
-	Multi-Way Combat
-
-	It may come to pass that units from multiple countries fight in an uncoordinated fashion for control of a sea or land territory.  This requires a few adjustments to the rules.  Each player “fights” each other player in a pairwise combat at full strength.  Losses are removed from each individual paired combat (so, for example, if in two separate combats I am to lose 1 unit and 2 units, I lose in total 3 units).  For land combat, the country with surviving units and with the highest total value occupies the territory.
-
-	Base Combat Value & Cost
-
-See this table:
-
-
-The attack and defense values for the units listed here are their fully-supplied base values.  Unless your orders specify otherwise, units use one supply in combat.  Unsupplied units fight at a value of 1.  Unless specified otherwise, units automatically consume supplies if supplies are available (from the most valuable to the least valuable if supplies are insufficient).  
-
-
-Economic Development
-
-	As mentioned earlier, economic development works slightly differently in this version than in the earlier versions.  Earlier versions of the game had economic development prices set by the details of the zones or hexes to which the development would apply.  In the current version the development still takes place in a physical location but the prices are set by the level of national GDP.  Players purchase additional development points per turn; the development points cost increasing amounts within the turn, with their cost set by the national GDP.  Then, during the reconciliation phase, they place those points in the economic zones they earlier designated.  Note with the current pricing scheme (see table) that players who bypass economic development then face higher costs to catch up: it is cheaper to build 10 points this turn and 10 points next turn than it is to build 0 this turn and 20 next turn (and, in some cases, may not even be feasible).  
-Economic Development Prices
-
-Note: the numbers listed as prices here are for the total price, not the price per additional point.  
-Atomic Research & The Bomb
-
-	Players may commit resources to producing the atomic bomb.  Note: in  one of the major differences between Democracies and Dictatorships: Democracies get 1 free unit of research per turn.  Atomic research gets more expensive as the game goes along:
-	Turns 1-3:  1 unit costs 1 pound
-	Turns 4-6: 1 unit costs 2 pounds
-	Turns 7+: 1 unit costs 3 pounds
-At the end of the game, players take their amount of research and multiply it by their GDP.  That is their “atomic score.”  The probability you acquire the bomb is just your share of the total atomic score.  
-	Note: a player may increase someone else’s level of atomic research up to their own.  So, if player A has 10 units of research and player B has 0 units of research, B may use in-game dollars to pay A to transfer their research.  Note that some of the politics cards also relate to atomic research (and may alter the use of the atomic bomb or other aspects of atomic research).  
-	When the game ends, and the bomb is developed, that player not only (A) gets to use the bomb but (B) gets a bonus in the final scoring for acquiring the bomb.  When a player uses the bomb, the player gets ten minutes to write down a target location.  The target location must be an economic zone within two zones of the territory you control or within two zones of one of your aircraft (if zones are I, II, III and you hold I: hit either II or III).  That zone’s value is reset to zero for the final accounting (it loses its original GDP contribution + any development).  
-
-“In Game Cash” & Political Spending
-
-In-Game Cash
-
-Players receive in-game cash through their politics.  You receive the amount of in-game cash equal to your political spending (in pounds), subject to modifications on the political cards themselves.  You collect that turn’s in-game cash when you resolve your political cards.  
-
-Some transactions require the expenditure of in-game cash.  If you transfer more than five territories or units (i.e., you must sum them) to an opposing player in one turn, you must return to the bank 1 Franc of in-game cash per unit or territory over that cap.  This represents the political cost of appearing to sell-out your country (and, in practice, generates a minimum price).  If you cannot pay the cost, you may not sell the units (although a cash exchange may be done simultaneously: if you have 0 Francs and must discard one, I may pay you 1 Franc to make the transaction possible).  
-
-Again, also note that there may be restrictions over when you may use in-game cash (see the section on “the turn”).  
-
-Political Spending
-
-Players spend either 0%, 10%, 20%, or 30% of their GDP on politics.  They write this into their purchase order.  During the reconciliation phase players draw political cards from the correct deck of political outcomes – decks based on their chosen spending level and their regime type.  So a dictatorship with 20% spending draws from the “20% Dictator” deck, and so on.   
-
-Generally speaking, the political decks reflect the different challenges and advantages of each regime type.  Dictatorships are more stable (both internally and externally) but face more serious consequences from inadequate spending.  Democracies, by comparison, have much less stable policy options but are more profitable and rarely have severe domestic political upheaval.  
-
-
-
-
-
-
-Ending and Scoring the Game
-
-After turn 10’s reconciliation phase, one player will roll a single d6.  With a 1,2, or 3, one player develops the atomic bomb and the game is over.  With a 4,5, or 6 the game continues and this procedure repeats at the end of turn 11 and so on until the game ends (so, starting after turn 10, there is a 50% chance the game ends).  Once the game ends, no more transactions (except those explicitly allowed in the section on the atomic bomb) are permitted.   
-
-If the game ends, the players then move on to determine who develops the atomic bomb (see the longer section on the atomic bomb).  
-
-Once the atomic bomb phase has concluded, players receive their payouts from the game.  Each  player obtains their share of pot equal to their share of the total score.  
-
-To calculate an individual’s score, first you must make a final payout of “in-game cash.”  This final payout is calculated as follows:
-
-	Remove damage done by the atomic bomb.  
-	Add GDP to total number of territories for each player.
-	Multiply by:
-		2 for most players
-		2.5 for the player with the atomic bomb
-	Pay out each player’s earned amount
-
-Players then add their final payout to their existing stocks of in-game cash.  This represents their “score.”  Then their score is taken as a fraction of the total score.  
-
-
-
-The League of Nations
-
-	In some variants of the map (and, possibly, in the interactions with some political cards), it may occur that some nations will be “neutral powers.”  Neutral powers are not controlled by any player.  They obtain two infantry units (placed randomly in their territory by some random device, with 2 supplies each) in every reconciliation phase.  The economic zone with their main city grows by 3 GDP in every reconciliation phase.  Although they are not active players in the game, their territory is “live”: any player may choose to invade a neutral country.
-	During each combat phase, at the start of the order resolutions in that phase, a player must announce if he had ordered his units into a neutral territory (before any other orders are revealed).  Then the “League of Nations” may meet to decide what to do.
-	The “League” will get 5 minutes to argue per neutral country subject to invasion.  Every player may participate in the league, regardless of their belligerency status.  At the conclusion of the time, each player submits a written “bid” - the amount of in-game cash that they will pay to help defend the country.  Regardless of the outcome, the in-game cash will be lost.
-	If the in-game cash committed by all players exceeds the number of units in the neutral country (so, an army of 5 units requires a commitment of at least 5 Francs in total), then the League intervenes.  When each player writes down their contribution (not secret; these have names attached) , they also write down a vote for who the League will send to defend the neutral power.  The player who obtains the plurality of the votes among the contributors then obtains all the possessions of the neutral country (their army, their GDP, etc.) for the remainder of the game.  In the event of a tie, the player with the larger contribution obtains control; in the event of a tie at that level, a randomization device determines which of the tied players wins control of the country. 	
-	If the league fails to provide enough in-game cash to defend the country, then the country must decide what to do.  It rolls a d6.  With 50% chance, the country (and all of its assets) joins the invader.  If not, the nation’s military disbands (leaving behind their supplies) and the territory must be physically occupied to be counted as “conquered.”  
-
-
-Note: some politics cards potentially may affect the operation of the league of nations and the existence of neutral powers (including, in extreme cases, the creation of neutral powers out of the territory of existing nations).  
-
-
-Starting the Game
-
-	The game starts with a series of 2nd price auctions for the right to pick the next nation.  The winner of the auction picks their country before the next auction takes place.  The players keep track of the order, as they will place military units in the reverse order of national choice.  When a player chooses a nation, a player also chooses their regime type (dictatorship or democracy).  Players may only choose a single nation.
-
-	Each player also starts with 100 GDP points that they may spend on military units, supplies, and economic development that they may place at the start of the game.  Players will get a fixed amount of time, once all nations have been chosen, to determine their initial purchase.  The purchases of all become common knowledge simultaneously and before any placement begins.  Then players put 10 objects (including production points) on the board at a time, starting with the last player to bid successfully and moving up to the player who picked first.   
-
-
-		
-
-
-
-       
-
-   
-
-
-	  
-	  
-	   
-	  
-
-
-
-  
-
-
-
-
-
-
-Technical Appendix
-
-Order Type Summary
-
-Terrain & Combat Modifier Summary
-
-Allocation Phase Notes
-
-Political Card Examples
-Order Type Summary:
-
-Air:
-	Must specify: 	(1) what to do with each possible point of air superiority – tactical or strategic
-			(2) where each aircraft should land (by territory, not zone).  
-Sea:
-	Must specify:	(1) the sea territory
-			(2) by territory what orders to execute
-Land: 
-	Must specify: 	(1) the land territory
-			(2) the unit movement path, if by train; includes “permissions”
-			(3) by territory, orders (by attack or defense type) 
-Sea Orders (Details) 
-Hide: The fleet does not search.  Regardless of what your opponent’s combat cards say, loaded Light Fleets are taken as casualties only if there are no other available casualties.  Your units use no more than one supply per enemy unit you destroy, up to a total of one supply for each of your units involved.  Additionally, draw only one combat card for every seven base points rather than every five.  
-Patrol: no modifications to the combat mechanic.  
-Engage: Fleet commits to the engagement at all hazards.  If one player selects engage, and one side successfully searches, every heavy fleet on both sides draws one extra sea combat card.      
-Note: all orders make come with an “attack shipping” modifier.   
-
-Land Orders (Details) 
-
-Defensive
-•	Screen:  You draw one combat card for every ten base points (with a minimum of one).  You only spend supply equal to the number of enemy units you destroy.  You also always lose infantry units before armor units and may specify a land territory as the retreat destination for both units & remaining supplies.  
-•	Defend: Regular rules.  You may designate a land territory as the retreat destination for units but not supplies.  
-•	Hold:  You draw one combat card for every three base points.  No units or supplies may retreat; if you lose the territory, you lose everything.  
-Offensive
-•	Scout: You draw one combat card for every ten base points (with a minimum of one).  You spend supply equal to the number of enemy units you destroy.  If you are unsuccessful in conquering the territory, your remaining supply retreats with your units (you must have specified a retreat territory in advance).  
-•	Advance: Regular rules.  You may designate a land territory as a retreat destination – but if you do not conquer the territory, you lose any supply sent to that space beyond what you used in combat.  Each unit consumes one supply in combat.  
-•	Blitzkrieg:  If you have air superiority, you draw one additional combat card for every armor & air-superiority-point pair you have in the territory.  For example, if you have +3 air superiority and three armor units, you would draw three additional cards.  If you do not have air superiority, the defender draws an extra card for every point of air superiority they possess.  Blitzkrieg requires the payment of one additional supply per unit to count them as fully supplied.         
-
-Terrain Modifier Summary
-
-City: 		+1 to each defending land unit’s base combat value;
-Port: 		+1 to each defending land unit’s base combat value; 
-Mountains: 	+1 to each defending land unit’s base combat value;
-Winter Season:	+1 to each defending land unit’s base combat value;
-Rivers:		Sep. base calculations for units crossing river; draw combat card per every 10 (& at least 1)
-Canals:		Sep. base calculations for units crossing canal; draw combat c. per every 12 (& at least 1)
-Shore:		Sep. base calculations for units landing; draw combat c. per every 15 pts. (& at least 1)
-
-Base Combat Value & Cost
-
-See this table:
-
-
-Other Relevant Pieces of Information for Combat:
-	Modifiers from orders (how many combat cards, what sort of supplies, what sort of losses).
-	Air superiority.
-	The values on the combat cards themselves. 
-
-Allocation Phase Notes
-
-Players may buy:
-	Units
-	Supplies
-	Economic Development
-	Politics (Includes in-game cash).  
-	Atomic Research (Democracies get some for free).  
-
-
-Political Card Examples
-
-Note: some cards may require looking at current GDP or other pieces of the board.  Those provisions are enacted as soon as possible during the reconciliation phase.  Those cards are left on the board until completed.
-
-Other cards may last over multiple turns.  Those are also left on the board or otherwise noted.   
-
-Democracy 0% Deck
-
-(Card 1).  No elections held this year.  Domestic tranquility.  Obtain 3 Francs.
-(Card 2).  Minor corruption trials related to weapons programs.  Lose 2 Francs to hush it up unless you had more atomic research (at the end of your previous turn) than any other player.  
-(Card 3).  Success buys tranquility.  If you have full possession of more economic zones than with which you began the game, obtain 1 Franc.  Otherwise, lose 1 Franc.  
-(Card 4).  Retrospective voting.  If GDP increased over the turn, face no negative political consequences.  Otherwise, pay 5 Francs.
-(Card 5).  Peace dividends.  If you took no casualties over the last year, obtain 5 Francs.  Otherwise, pay 5 Francs.
-(Card 6).  Peace Party obtain majority.  Military units abroad are ordered home at all costs.  Those within three spaces of a railway over which you had transportation permission in the last period are immediately transported to the closest rail space within your original borders.  Ships at sea are immediately moved to the inside of your nearest original home ports if they have a path of unobstructed sea zones to reach there.  Aircraft are immediately assigned to locate in one of your closest original cities if they are within two air zones.  Any units not meeting these criteria are either sold the owner of the territory (or, at sea, nearest territory – ties broken randomly) at the price of 1 Franc per unit.  Units not sold are disbanded.  You may only fight within your home territories for the next year.  
-(Card 7).  Isolationists obtain majority.  You may not attack the units of any power in the next turn unless you either (a) fought units of that power in this last turn or (b) are attacked by units of that power.
-(Card 8).  Idealists obtain majority.  Your units may not fight in allied combinations with dictatorships for two full turns (display this card over that entire period; may be canceled by subsequent political cards).
-(Card 9).  Anti-Imperialists demand recognition of national independence movements.  Any territories acquired through the action of the league of nations on your part must be returned to independence and neutrality – including any units currently in those territories that belong to you.  Allied units are evacuated to their nearest exit point or sold back to the bank for 1 Franc each.
-(Card 10).  Anti-communists gain a majority.  Your units may not fight in conjunction in the next year with any Democracy or Dictatorship that spent more than 10% on politics in this year.
-(Card 11).  Peace Party defeats defense budget.  You may not spend anything on military units, supplies, or atomic development in this upcoming turn.  You must spend 30% of your budget on politics.  You must spend as much as you can on economic development.  Any unspent GDP (due to costs of development) is simply lost.
-(Card 12).  Hawks defeat budget.  You must spend your entire budget on military units and supplies.
-(Card 13).  Government gridlock.  You repeat your expenditures by category from the previous year (so, same amount for military units, supplies, politics, atomic research, and development).  Anything not obtainable is lost.
-(Card 14).  The Coburn Committee seeks to eliminate waste, fraud, and abuse; you may not make any political spending for the next turn.  Additionally, lose 5 Francs.
-(Card 15).  Payoffs to Tammany Hall.  Spend 50 percent of your GDP on politics to obtain the 30% outcome – or lose 20 Francs at the end of the next turn.  Keep this card out (decide privately).  
-(Card 16).  War Party Takes Control of Parliament.  If any of your territories are adjacent to a neutral territory, you must invade it or pay 10 Francs per combat season (paid once orders are revealed in that season) in which this action does not take place.
-(Card 17).  Idealist Fanatics demand that the world be made safe for Democracy!  If you do not occupy a city of a foreign dictatorship within the next two turns (six combat seasons), lose 20 Francs.  Void if canceled by subsequent political card or the end of the game.  Keep this card on the table.       
-(Card 18).  Isolationists Force Exit from League of Nations.  You may not participate in the League of Nations for the next two turns.  Keep this card out on the table.
-(Card 19).  Parliament Favors Internationalists.  For the remainder of the game, you may only invade a foreign country to conquer it with a majority vote in the League of Nations (vote taken after orders issued; if failed, orders do not execute and units defend).  Pay each nation, other than the one you are invading, 3 Francs for the privilege of holding the vote, regardless of the outcome.
-(Card 20).  Parliament Favors League of Democracies.  For the remainder of the game, you may only initiate hostilities with a foreign power if all the Democracies unanimously consent.  Must obtain consent after orders have been issued; if withheld, orders do not execute and units defend.     
-(Card 21).  Atomic Protestors Win Vote in Congress.  Although you may develop the atomic bomb, you may not use it in this game.
-(Card 22).  Dissatisfied Socialists Leak Secrets.  One nation is chosen at random: if you have more atomic research than they do, a spy brings their research up to your level.  
-(Card 23).  Independence Vote Successful.  One of your economic zones (other than those with which you began the game with full control), chosen at random, votes for independence.  All units, supplies, and development in that territory becomes part of an independent neutral country.
-(Card 24).  Anti-War Protestors weaken army.  All armor and infantry units fight at a combat value of 1 in the next turn (if fully supplied) and a combat value of .5 if unsupplied.  
-(Card 25).  Anti-War Protestors prevent recruitment.  All infantry units slated to be produced this turn refuse to enlist and are disbanded.     
-
-
-Democracy 10% Deck
-
-(Card 1): No elections held this year.  Obtain an additional 3 Francs.
-(Card 2):  Peace Party offers conditional support.  If in your last turn you purchased no additional atomic research, obtain 2 Francs.  Otherwise, nothing happens.
-(Card 3): Military Success Bonus.  If your frontiers have expanded since the start of the game, obtain 1 additional Franc.
-(Card 4): Retrospective Voting.  If GDP increased over the last turn, obtain 5 additional Francs.  If not, lose 2 Francs.
-(Card 5): Peace Dividends.  If you took no casualties over the last tun, obtain 5 additional Francs.  Otherwise, lose 2 Francs.  
-(Card 6): Peace Party makes gains in legislature.  If combat took place over the last turn involving your units, pay 5 Francs.    
-(Card 7).  Isolationists obtain majority.  You may not attack the units of any power in the next turn unless you either (a) fought units of that power in this last turn or (b) are attacked by units of that power.
-(Card 8).  Idealists make gains in legislature.  Your units may not fight in allied combinations with dictatorships for one full turn unless you pay 1 Franc per combat season in which they fight.  
-(Card 9).  Anti-Imperialists demand recognition of national independence movements.  Any territories acquired through the action of the league of nations on your part must be returned to independence and neutrality if the league votes on their independence and pays at least 1 Franc per unit in the territories.  Your units and allied units are evacuated to their nearest exit point or sold back to the bank for 1 Franc each.
-(Card 10).  Anti-communists gain a majority.  Your units may not fight in conjunction in the next year with any Democracy or Dictatorship that spent more than 10% on politics in this year.
-(Card 11).  Peace Party defeats defense budget.  You may not purchase any additional military units in the upcoming turn although you may purchase supplies.  
-(Card 12).  Hawks insist on the construction of two heavy fleets.  You must comply if your budget allows and you have port facilities.  If you do not have port facilities, pay 2 Francs.  If you have ports but your budget does not allow the construction of two heavy fleets, pay 5 Francs.   
-(Card 13).  Government gridlock.  You must produce precisely the same military units this year as you produced last year.  
-(Card 14).  The Coburn Committee finds waste, fraud, and abuse.  You may not spend more than 10% on politics in the next year and you must pay 4 Francs immediately to the bank.  
-(Card 15).  Payoffs to Tammany Hall.  Spend 50 percent of your GDP on politics to obtain the 30% outcome – or lose 5 Francs at the end of the next turn.  Keep this card out (decide privately).  
-(Card 16).  War Party Takes Control of Parliament.  If any of your territories are adjacent to a neutral territory, you must invade it or pay 3 Francs per combat season (paid once orders are revealed in that season) in which this action does not take place.
-(Card 17).  Idealist Fanatics demand that the world be made safe for Democracy!  If you do not occupy a city of a foreign dictatorship within the next two turns (six combat seasons), lose 20 Francs.  Void if canceled by subsequent political card or the end of the game.  Keep this card on the table.       
-(Card 18).  Isolationists Force Exit from League of Nations.  You may not participate in the League of Nations for the next two turns.  Keep this card out on the table.
-(Card 19).  Parliament Favors Internationalists.  For the remainder of the game, you may only invade a foreign country to conquer it with a majority vote in the League of Nations (vote taken after orders issued; if failed, orders do not execute and units defend).  Pay each nation, other than the one you are invading, 3 Francs for the privilege of holding the vote, regardless of the outcome.
-(Card 20).  Parliament Favors League of Democracies.  For the remainder of the game, you may only initiate hostilities with a foreign power if all the Democracies unanimously consent.  Must obtain consent after orders have been issued; if withheld, orders do not execute and units defend.     
-(Card 21).  Atomic Protestors Win Vote in Congress.  Although you may develop the atomic bomb, you may not use it in this game.
-(Card 22).  Dissatisfied Socialists Leak Secrets.  One nation is chosen at random: if you have more atomic research than they do, a spy brings their research up to your level.  
-(Card 23).  Surprise victory in a midterm election.  You may pay 1 Franc to remove the effects of any previous political card (of yours) currently operating against you.  You must decide now.  
-(Card 24).  Anti-War Protestors weaken army.  All armor and infantry units fight at a combat value of 1 in the next turn (if fully supplied) and a combat value of .5 if unsupplied.  
-(Card 25).  Anti-War Protestors prevent recruitment.  All infantry units slated to be produced this turn refuse to enlist and are disbanded.     
-
-
-Democracy 20% Deck
-
-(Card 1): No elections held this year.  Obtain an additional 3 Francs.
-(Card 2):  Peace Party offers conditional support.  If in your last turn you purchased no additional atomic research, obtain 3 Francs.  Otherwise, nothing happens.
-(Card 3): Military Success Bonus.  If your frontiers have expanded since the start of the game, obtain 5 additional Francs.
-(Card 4): Retrospective Voting.  If GDP increased over the last turn, obtain 5 additional Francs.  If not, lose 1 Franc.  
-(Card 5): Peace Dividends.  If you took no casualties over the last turn, obtain 7 additional Francs.  Otherwise, lose 1 Franc.    
-(Card 6): Peace Party makes gains in legislature.  If combat took place over the last turn involving your units, pay 3 Francs.    
-(Card 7).  Isolationists obtain majority.  You may not attack the units of any power in the next turn unless you either (a) fought units of that power in this last turn or (b) are attacked by units of that power.
-(Card 8).  Idealists make gains in legislature.  Your units may not fight in allied combinations with dictatorships for one full turn unless you pay 1 Franc per combat season in which they fight.  
-(Card 9).  Propaganda Victory.  For every vote at the League of Nations this turn, each of your Francs counts as two.   
-(Card 10).  Anti-communists gain a majority.  Your units may not fight in conjunction in the next year with any Democracy or Dictatorship that spent more than 10% on politics in this year unless you pay 2 Francs for the turn (now).   
-(Card 11).  Peace Party defeats defense budget.  You may not purchase any armor or heavy fleets in this turn.  
-(Card 12).  Navy advocates insist on the construction of one heavy fleet.  If you do not comply, or cannot comply, lose 2 Francs.  Keep this card on the table.       
-(Card 13).  Government gridlock.  You must produce precisely the same military units this year as you produced last year.  
-(Card 14).  The Coburn Committee finds waste, fraud, and abuse.  You may not spend more than 10% on politics in the next year and you must pay 4 Francs immediately to the bank.  
-(Card 15).  War enthusiasm lowers infantry cost by 1 pound per unit this turn.    
-(Card 16).  War Party Takes Control of Parliament.  If any of your territories are adjacent to a neutral territory, you must invade it or pay 1 Franc per combat season (paid once orders are revealed in that season) in which this action does not take place.
-(Card 17).  Idealist Fanatics demand that the world be made safe for Democracy!  If you do not occupy a city of a foreign dictatorship within the next two turns (six combat seasons), lose 10 Francs.  Void if canceled by subsequent political card or the end of the game.  Keep this card on the table.       
-(Card 18).  Isolationists Wish to Exit from League of Nations.  If you leave the League of Nations for the next two turns, collect 5 Francs.  Keep this card out on the table.
-(Card 19).  Parliament Favors Internationalists.  For the next turn, you may only invade a foreign country to conquer it with a majority vote in the League of Nations (vote taken after orders issued; if failed, orders do not execute and units defend).  Pay each nation, other than the one you are invading, 3 Francs for the privilege of holding the vote, regardless of the outcome.
-(Card 20).  Parliament Favors League of Democracies.  For the next turn, you may only initiate hostilities with a foreign power if all the Democracies unanimously consent.  Must obtain consent after orders have been issued; if withheld, orders do not execute and units defend.     
-(Card 21).  Atomic Protestors Win Vote in Congress.  Although you may develop the atomic bomb, you may not use it in this game.
-(Card 22).  Dissatisfied Socialists Leak Secrets.  One nation is chosen at random: if you have more atomic research than they do, a spy brings their research up to your level.  
-(Card 23).  Surprise victory in a midterm election.  You may pay 1 Franc to remove the effects of any previous political card (of yours) currently operating against you.  You must decide now.  
-(Card 24).  Anti-War Protestors weaken army.  All armor and infantry units fight at a combat value of 2 in the next turn (if fully supplied) and a combat value of 1 if unsupplied.  
-(Card 25).  Anti-War Protestors increase the cost of recruitment.  Infantry and Armor units cost an additional pound this turn.       
-
-
-Democracy 30% Deck
-
-(Card 1): No elections held this year.  Obtain an additional 5 Francs.
-(Card 2):  Form national government.  In the next political cycle, obtain 30% payout in Francs but retain the GDP and draw no political cards.  
-(Card 3): Military Success Bonus.  If your frontiers have expanded since the start of the game, obtain 5 additional Francs.
-(Card 4): Retrospective Voting.  If GDP increased over the last turn, obtain 5 additional Francs.  If not, lose 1 Franc.  
-(Card 5): Peace Dividends.  If you took no casualties over the last turn, obtain 10 additional Francs.  Otherwise, lose 1 Franc.    
-(Card 6): Peace Party makes gains in legislature.  If combat took place over the last turn involving your units, pay 3 Francs.    
-(Card 7).  Isolationists obtain majority.  You may not attack the units of any power in the next turn unless you either (a) fought units of that power in this last turn or (b) are attacked by units of that power.
-(Card 8).  Idealists make gains in legislature.  Your units may not fight in allied combinations with dictatorships for one full turn unless you pay 1 Franc per combat season in which they fight.  
-(Card 9).  Propaganda Victory.  For every vote at the League of Nations this turn, each of your Francs counts as two.   
-(Card 10).  Anti-communists ask you to form dictatorship.  Obtain one-time payout of 15 Francs and then play the rest of the game as a dictator if you choose.  Otherwise, obtain a one-time payout of 20 Francs.   
-(Card 11).  Peace Party defeats defense budget.  You may not purchase any armor or heavy fleets in this turn.  
-(Card 12).  Navy advocates insist on the construction of one heavy fleet.  If you pay 2 Francs now, you may produce the fleet at a 5 pound discount.  If you do not produce the fleet by the end of the next turn, pay 1 Franc.          
-(Card 13).  Government gridlock.  You must produce precisely the same military units this year as you produced last year.  
-(Card 14).  The Coburn Committee finds waste, fraud, and abuse.  You may not spend more than 20% on politics in the next year and you must pay 3 Francs immediately to the bank.  
-(Card 15).  War enthusiasm lowers infantry and armor costs by 1 pound per unit this turn.    
-(Card 16).  War Party Takes Control of Parliament.  If any of your territories are adjacent to a neutral territory, you must invade it or pay 1 Franc per combat season (paid once orders are revealed in that season) in which this action does not take place.
-(Card 17).  Idealist Fanatics demand that the world be made safe for Democracy!  If you do not occupy a city of a foreign dictatorship within the next two turns (six combat seasons), lose 5 Francs.  Void if canceled by subsequent political card or the end of the game.  Keep this card on the table.       
-(Card 18).  Isolationists Wish to Exit from League of Nations.  If you leave the League of Nations for the next two turns, collect 5 Francs.  Keep this card out on the table.
-(Card 19).  Parliament Favors Internationalists.  For the next turn, you may only invade a foreign country to conquer it with a majority vote in the League of Nations (vote taken after orders issued; if failed, orders do not execute and units defend).  Pay each nation, other than the one you are invading, 1 Franc for the privilege of holding the vote, regardless of the outcome.
-(Card 20).  Parliament Favors League of Democracies.  For the next turn, you may only initiate hostilities with a foreign power if all the Democracies unanimously consent.  Must obtain consent after orders have been issued; if withheld, orders do not execute and units defend.     
-(Card 21).  Atomic Protestors Win Vote in Congress.  Although you may develop the atomic bomb, you may not use it in this game.
-(Card 22).  Dissatisfied Socialists Leak Secrets.  One nation is chosen at random: if you have more atomic research than they do, a spy brings their research up to your level.  
-(Card 23).  Surprise victory in a midterm election.  You may pay 1 Franc to remove the effects of any previous political card (of yours) currently operating against you.  You must decide now.  
-(Card 24).  Anti-War Protestors shot by national guard.  Pay 1 Franc.    
-(Card 25).  Anti-War Protestors increase the cost of recruitment.  Infantry and Armor units cost an additional pound this turn.       
-
-Dictatorship 0% Deck
-(Card 1).  War Weariness.  Lose 3 Francs if you do not possess all of your original territories.  Otherwise, nothing happens.    
-(Card 2).  Disturbances in Captured Cities.  Lose 1 Franc for every city beyond your initial territory that you currently occupy.  
-(Card 3).   Major Riot in Capital.  Lose 2 Francs.  May substitute 4 supplies (if available in one of your original cities) if you wish.
-(Card 4).   Show Trial Poorly Received.  The witnesses were too sympathetic.  Pay 2 Francs.
-(Card 5).   Minor Underground activity.  Remove two supplies (you choose) from territories behind your original borders (if you have any).
-(Card 6).  Briefcase Bomb Plot.  You are disabled in a bombing at headquarters and subsequently execute a top general.  Blitzkrieg orders are no longer available to you unless  this card is canceled by some other card.
-(Card 7).  Major Coup Attempt!  The subsequent fighting consumes all of the new production – supplies and units - from one of the cities in your home territories (chosen randomly). 
-(Card 8).  Air Chief Defects.  Remove one of your air units from the map (chosen by you).  
-(Card 9).  Oligarchs Assert Power.  Unless you have conquered and control two full economic zones beyond your initial borders (as of drawing this card), you must pay the oligarchs (the bank) 15 Francs the next time you conquer a new territory (after a successful invasion, during that combat phase).  This card lasts until canceled by some other card or the action is fulfilled.   
-(Card 10).  Assassin Hits Mark.  Fortunately, Mark is merely your twin brother.  Military units in your home territories all participate in the hunt for the killer – and use one supply each (drawn from anywhere in your home territories; you choose).  
-(Card 11).  John has a Long Mustache.  Resistance fighters destroy railways in foreign territories occupied by you.  For the next turn, you may not move units or supplies by rail outside of your home territories.
-(Card 12).  Resistance Proclaims Independence!  A full economic zone outside your home territories, chosen randomly, becomes neutral and obtains 5 neutral infantry placed in some random territory of that province.  The League of Nations will vote for control of those armies immediately; it requires only 3 Francs total contribution to control.  If League fails to vote to secure the armies, remove both the neutral infantry and three of your own units in the economic zone from the board.       
-(Card 13).  Terrorism Damages Economy.  All economic zones lose one unit of added GDP (effective immediately).
-(Card 14).  Ghetto Uprising!  Choose randomly among cities you have captured.  If the city is garrisoned with less than 3 units, it proclaims neutrality and adds 3 infantry.  The League of Nations votes immediately for control.  Your units evacuate to an adjacent territory that you control (if impossible, your units are lost).  If the League fails to provide 3 Francs, the freedom fighters disappear from the map.
-(Card 15).  Guerilla’s Plot to Aid Invaders.  Keep this card out until canceled otherwise.  Choose a province randomly.  Within that province, Democracies draw one extra combat card in combats.  
-(Card 16).  Low Morale.  Enlistees seek to dodge the draft.  Infantry and armor costs increase by 1 Pound for this next allocation phase.
-(Card 17).  Political Corruption Damages Your Supply Chain.  In every location you have ordered new supplies produced, 3 less supplies are actually produced than ordered in this turn. 
-(Card 18).  Weapons Program Corruption.  Your nuclear scientists have been lying to you.  Your nuclear progress is actually… 0, including any production ordered this turn.
-(Card 19).  Work Camps Produce Poor Ammunition.  Supplies cost 2 pounds this turn.
-(Card 20).  Lack of Freedom Damages Economic Growth.  Remove 2 (added) GDP points from all of your fully conquered economic zones.
-(Card 21).  Navy Avoids Battle.  Your poorly paid admirals all choose “hide” for all combat phases during the next turn rather than risk their lives for you.   
-(Card 22).  Political Generals Are Idiots.  Your generals were appointed by their connections rather than by their merits.  In all land combats during the next turn, draw at most one combat card.
-(Card 23).  Massive Supply Theft!  Remove ten supplies from your stocks currently on the board.  While you shoot those responsible, unfortunately it is impossible to locate the lost goods.
-(Card 24).  Low Infantry Morale.  With idiots like you in charge, the war is hopeless.  Who wants to be the last to die in a lost cause?  Fully supplied infantry in the next turn fight at (1 attack, 2 defense); unsupplied infantry fight at (0 attack, 1 defense).  
-(Card 25).  Bagdad Bob.  If you have lost any of your starting territory, lose 15 Francs for the embarrassment.     
-
-Dictatorship 10% Deck
-(Card 1).  War Weariness.  Lose 3 Francs if you do not possess all of your original territories.  Otherwise, nothing happens.    
-(Card 2).  Disturbances in Captured Cities.  Lose 1 Franc for every city beyond your initial territory that you currently occupy.  
-(Card 3).   Major Riot in Capital.  Lose 2 Francs.  May substitute 4 supplies (if available in one of your original cities) if you wish.
-(Card 4).   Show Trial Poorly Received.  The witnesses were too sympathetic.  Pay 2 Francs.
-(Card 5).   Minor Underground activity.  Remove two supplies (you choose) from territories behind your original borders (if you have any).
-(Card 6).  Briefcase Bomb Plot.  You are disabled in a bombing at headquarters and subsequently execute a top general.  Blitzkrieg orders are no longer available to you on this turn.  
-(Card 7).  Major Coup Attempt!  The subsequent fighting consumes all of the new production – supplies and units - from one of the cities in your home territories (chosen randomly). 
-(Card 8).  Air Chief Defects.  Remove one of your air units from the map (chosen by you).  
-(Card 9).  Oligarchs Assert Power.  Unless you have conquered and control two full economic zones beyond your initial borders (as of drawing this card), you must pay the oligarchs (the bank) 10 Francs the next time you conquer a new territory (after a successful invasion, during that combat phase).  This card lasts until canceled by some other card or the action is fulfilled.   
-(Card 10).  Assassin Hits Mark.  Fortunately, Mark is merely your twin brother.  Military units in your home territories all participate in the hunt for the killer – and use one supply each (drawn from anywhere in your home territories; you choose).  
-(Card 11).  John has a Long Mustache.  Resistance fighters destroy railways in foreign territories occupied by you.  For the next turn, you may not move units or supplies by rail outside of your home territories.
-(Card 12).  Resistance Proclaims Independence!  A full economic zone outside your home territories, chosen randomly, becomes neutral and obtains 5 neutral infantry placed in some random territory of that province.  The League of Nations will vote for control of those armies immediately; it requires only 3 Francs total contribution to control.  If League fails to vote to secure the armies, remove both the neutral infantry and three of your own units in the economic zone from the board.       
-(Card 13).  Terrorism Damages Economy.  All economic zones lose one unit of added GDP (effective immediately).
-(Card 14).  Ghetto Uprising!  Choose randomly among cities you have captured.  If the city is garrisoned with either no units or only one unit, it proclaims neutrality and adds 3 infantry.  The League of Nations votes immediately for control.  Your unit evacuates to an adjacent territory that you control (if impossible, your unit is lost).  If the League fails to provide 3 Francs, the freedom fighters disappear from the map.
-(Card 15).  Guerilla’s Plot to Aid Invaders.  Choose a province randomly.  Within that province, Democracies draw one extra combat card in combats on this turn.   
-(Card 16).  Low Morale.  Enlistees seek to dodge the draft.  Infantry and armor costs increase by 1 Pound for this next allocation phase.
-(Card 17).  Political Corruption Damages Your Supply Chain.  In every location you have ordered new supplies produced, 2 less supplies are actually produced than ordered in this turn. 
-(Card 18).  Weapons Program Corruption.  Your nuclear scientists have been lying to you.  Your nuclear progress is actually… 0, including any production ordered this turn.
-(Card 19).  Work Camps Produce Poor Ammunition.  Supplies cost 2 pounds this turn.
-(Card 20).  Lack of Freedom Damages Economic Growth.  Remove 1 (added) GDP point from all of your fully conquered economic zones.
-(Card 21).  Obtain intelligence of uprising; spectacular show trials increase support.  Obtain 2 additional Francs.  
-(Card 22).  Political Generals Are Idiots.  Your generals were appointed by their connections rather than by their merits.  In all land combats during the next turn, draw at most one combat card.
-(Card 23).  Massive Supply Theft!  Remove 5 supplies from your stocks currently on the board.  While you shoot those responsible, unfortunately it is impossible to locate the lost goods.
-(Card 24).  Low Infantry Morale.  With idiots like you in charge, the war is hopeless.  Who wants to be the last to die in a lost cause?  Fully supplied infantry in the next turn fight at (1 attack, 2 defense); unsupplied infantry fight at (0 attack, 1 defense).  
-(Card 25).  Bagdad Bob.  If you have lost any of your starting territory, lose 10 Francs for the embarrassment.     
-
-Dictatorship 20% Deck
-(Card 1).  War Weariness.  Lose 1 Franc if you do not possess all of your original territories.  Otherwise, nothing happens.    
-(Card 2).  Disturbances in Captured Cities easily contained.  Nothing happens.    
-(Card 3).   Major Riot in Capital.  Suppressing the riot costs you two supplies (from anywhere) but the PR effects generate an additional 1 Franc.   
-(Card 4).   Show Trial Poorly Received.  The witnesses were too sympathetic.  Pay 1 Franc.
-(Card 5).   Minor Underground activity.  Remove two supplies (you choose) from territories beyond your original borders (if you have any).
-(Card 6).  Briefcase Bomb Plot Fails.  You are disabled in a bombing at headquarters and subsequently execute a top general.  Pay 1 Franc to smooth things over.  Wipes away any negative political cards still in effect.    
-(Card 7).  Major Coup Attempt Caught!  Obtain two additional Francs from selling the plotter’s stolen art collections.  Wipes away any negative political cards still in effect. 
-(Card 8).  Air Chief Defects.  Remove one of your air units from the map (chosen by you).  
-(Card 9).  Oligarchs Assert Power.  Unless you have conquered and control two full economic zones beyond your initial borders (as of drawing this card), you must pay the oligarchs (the bank) 5 Francs the next time you conquer a new territory (after a successful invasion, during that combat phase).  This card lasts until canceled by some other card or the action is fulfilled.   
-(Card 10).  Assassin Hits Mark.  Fortunately, Mark is merely your twin brother.  Gives you an excuse to round up the usual suspects.  Obtain 1 Franc.  
-(Card 11).  John has a Long Mustache.  Resistance fighters destroy railways in foreign territories occupied by you.  For the next turn, you may not move units or supplies by rail outside of your home territories.
-(Card 12).  Resistance Movement Betrayed.  All attempts to destabilize your government fail; nothing happens.         
-(Card 13).  Terrorism Damages Economy.  All economic zones lose one unit of added GDP (effective immediately).
-(Card 14).  Ghetto Uprising Crushed!  You lose one supply (from anywhere, your choice) but obtain 1 Franc.  
-(Card 15).  Guerilla’s Plot to Aid Invaders.  Choose a province randomly.  Within that province, Democracies draw one extra combat card in combats on this turn.   
-(Card 16).  Youth program success!  Obtain an extra infantry unit that may be placed in any of your original cities (immediately).  
-(Card 17).  Foreign Loot Supports War Effort.  For every full economic zone you have conquered, obtain 3 extra supplies (place anywhere you control, immediately).   
-(Card 18).  Weapons Program Espionage.  Randomly choose among the Democracies.  Obtain at least their level of atomic research.  
-(Card 19).  Work Camps Produce Poor Ammunition.  Supplies cost 2 pounds this turn.
-(Card 20).  Lack of Freedom Damages Economic Growth.  Remove 1 (added) GDP point from all of your fully conquered economic zones.
-(Card 21).  Obtain intelligence of uprising; spectacular show trials increase support.  Obtain 2 additional Francs.  
-(Card 22).  Political Generals Are Idiots.  Your generals were appointed by their connections rather than by their merits.  In all land combats during the next turn, draw at most three combat cards.
-(Card 23).  All Quiet on the Western Front.  Nothing happens.  
-(Card 24).  Held Military Review.  Obtain 1 Franc.    
-(Card 25).  Impressive Party Rally.  Obtain 2 Francs.       
-
-Dictatorship 30% Deck
-(Card 1).  War Weariness.  Lose 1 Franc if you do not possess all of your original territories.  Otherwise, nothing happens.    
-(Card 2).  Disturbances in Captured Cities easily contained.  Nothing happens.    
-(Card 3).   Major Riot in Capital.  Suppressing the riot costs you two supplies (from anywhere) but the PR effects generate an additional 1 Franc.   
-(Card 4).   Show Trial Poorly Received.  The witnesses were too sympathetic.  Pay 1 Franc.
-(Card 5).   Loot Conquered Territory.  For every full economic zone you have conquered, get 1 Franc.   Wipes away any negative political cards still in effect.  
-(Card 6).  Briefcase Bomb Plot Fails.  You are disabled in a bombing at headquarters and subsequently execute a top general.  Pay 1 Franc to smooth things over.  Wipes away any negative political cards still in effect.    
-(Card 7).  Major Coup Attempt Caught!  Obtain two additional Francs from selling the plotter’s stolen art collections.  Wipes away any negative political cards still in effect. 
-(Card 8).  Air Chief Found Incompetent.  Lose 2 supplies from anywhere (you choose).    
-(Card 9).  Oligarchs Support Regime with technical assistance.  Gain 2 supplies (place anywhere).     
-(Card 10).  Assassin Hits Mark.  Fortunately, Mark is merely your twin brother.  Gives you an excuse to round up the usual suspects.  Obtain 1 Franc.  
-(Card 11).  John has a Long Mustache.  Resistance fighters destroy railways in foreign territories occupied by you.  For the next turn, you may not move units or supplies by rail outside of your home territories.
-(Card 12).  Resistance Movement Betrayed.  All attempts to destabilize your government fail; nothing happens.         
-(Card 13).  Terrorism Damages Economy.  All economic zones lose one unit of added GDP (effective immediately).
-(Card 14).  Pro-regime fanatics undermine the domestic life of the democracies.  Obtain 1 Franc for every Democracy still in the game.  
-(Card 15).  Guerillas Plot to Aid Invaders.  Choose a province randomly.  Within that province, Democracies draw one extra combat card in combats on this turn.   
-(Card 16).  Youth program success!  Obtain an extra infantry unit that may be placed in any of your original cities (immediately).  
-(Card 17).  Foreign Loot Supports War Effort.  For every full economic zone you have conquered, obtain 3 extra supplies (place anywhere you control, immediately).   
-(Card 18).  Weapons Program Espionage.  Randomly choose among the Democracies.  Obtain at least their level of atomic research.  
-(Card 19).  Youth program encourages fanaticism in the army.  Defending (all order types) land units fight at an additional +1 for this turn.  
-(Card 20).  Lack of Freedom Damages Economic Growth.  Remove 1 (added) GDP point from all of your fully conquered economic zones.
-(Card 21).  Obtain intelligence of uprising; spectacular show trials increase support.  Obtain 2 additional Francs.  
-(Card 22).  Political Generals Are Idiots.  You fire them – but it costs you some to smooth things over, make them Field Marshals, and shunt them out of the way.  Pay 3 Francs.  
-(Card 23).  All Quiet on the Western Front.  Nothing happens.  
-(Card 24).  Held Military Review.  Obtain 1 Franc.    
-(Card 25).  Impressive Party Rally.  Obtain 2 Francs.       
- -->
 
 	</body>
 
