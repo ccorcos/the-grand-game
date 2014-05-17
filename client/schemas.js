@@ -1,3 +1,5 @@
+unitTypes = ['infantry', 'armor', 'lightFleet', 'heavyFleet', 'aircraft']
+
 // Define the schema
 Units = new SimpleSchema({
     infantry: {
