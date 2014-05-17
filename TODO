@@ -38,3 +38,11 @@ autoform with simple-schema
 DO:
 casualties
 iron router - layout, navbar, loading spinner + delay, form and results pages 
+
+outcome
+OFFENSE WINS
+defense casualties
+infantry:2
+armor:2
+etc.
+offense causalties
