@@ -9,10 +9,10 @@ computeBattle = function(battle) {
 
     data = {}
 
-    data.winner = computeWin(battle)
+    _.extend(data, computeWin(battle))
     _.extend(data, computeCasualties(battle))
 
-    console.log(data)
+    // console.log(data)
     return data
 }
 
@@ -45,8 +45,15 @@ computeWin = function(battle) {
     // console.log('attacking strength:', attackingStrength)
 
     success = attackSuccess(attackingStrength, defensiveStrength)
+    data = {}
+    data.winner = success ? "ATTACK WINS" : "DEFENSE WINS"
+    if (success) {
+        data.odds = attackingStrength / (defensiveStrength + attackingStrength) * 100
+    } else {
+        data.odds = defensiveStrength / (defensiveStrength + attackingStrength) * 100
+    }
     // success ? console.log("the attack succeeded") : console.log("the defense succeeded")
-    return success ? "ATTACK WINS" : "DEFENSE WINS"
+    return data
 }
 
 computeCasualties = function(battle) {
@@ -87,10 +94,15 @@ computeCasualties = function(battle) {
     // console.log("remaining defensive army:", defendingArmyList)
     // console.log("remaining attacking army:", attackingArmyList)
 
+    defenseLosses = mergeSuppliedAndUnsupplied(listToArmy(defendingCasualties))
+    attackLosses = mergeSuppliedAndUnsupplied(listToArmy(attackingCasualties))
+    defenseLosses.cost = armyValue(listToArmy(defendingCasualties), 'cost')
+    attackLosses.cost = armyValue(listToArmy(attackingCasualties), 'cost')
+
     return {
         casualties: {
-            defending: mergeSuppliedAndUnsupplied(listToArmy(defendingCasualties)),
-            attacking: mergeSuppliedAndUnsupplied(listToArmy(attackingCasualties))
+            defending: defenseLosses,
+            attacking: attackLosses
         }
     }
 }

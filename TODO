@@ -1,48 +1,11 @@
-some random functions:
-randomly choose from discrete distribution with weights
 
-win and causalities (calculate cost)
-
-army = number of supplied and unsupplied units
-battle modifiers: cards and terrain
-
-how does a battle work?
-win-lose:
-    add total defensive strength of defending army (including modifiers)
-    add total attacking strength of attacking army (including modifiers)
-    discrete roll
-
-casualties:
-    all simultaneus kills
-
-    each unit does a 50% roll to possibly kill twice (after everyone has attacked once. if this unit dies, he kill again)
-    remembers that offense and defense have different kill scores (out of 6)
-    sum up kills for each army
-    randomly choose n kills based on a weighted discrete distribution
-
-CODE:
-
--- list of unit types -> form for numbers. defense, offense, supplied and unsupplied.
--- discrete random functions, weighted stuffs
-win lose + casualties
 
 
 battle modifiers cards and terrin - later
 
-SAM:
-layout
-['infantry', 'armor', 'light fleet', 'heavy fleet', 'aircraft']
-autoform with simple-schema
 
 
-DO:
-casualties
-iron router - layout, navbar, loading spinner + delay, form and results pages 
+loading spinner 2 seconds
 
-outcome
-OFFENSE WINS
-defense casualties
-infantry:2
-armor:2
-etc.
-offense causalties
+
+second chance battle recursion

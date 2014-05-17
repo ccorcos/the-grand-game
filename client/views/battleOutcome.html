@@ -1,13 +1,25 @@
 <template name="battleOutcome">
     {{#with sessionVar 'battleOutcomeData'}}
-        <h1>{{winner}}</h1>
-        <h3>Attacking</h3>
-        {{#each keyValue casualties.attacking}}
-            {{key}}:{{value}}
-        {{/each}}
-        <h3>Defending</h3>
-        {{#each keyValue casualties.defending}}
-            {{key}}:{{value}}
-        {{/each}}
+        <h1 class="text-center winner">{{winner}} - {{odds}}%</h1>
+        <table class="table text-center center outcome">
+            <td>
+                <tr>Unit Type</tr>
+                {{#each keyValue casualties.attacking}}
+                    <tr>{{key}}</tr>
+                {{/each}}
+            </td>
+            <td>
+                <tr>Attacking</tr>
+                {{#each keyValue casualties.attacking}}
+                    <tr>{{value}}</tr>
+                {{/each}}
+            </td>
+            <td>
+                <tr>Defending</tr>
+                {{#each keyValue casualties.defending}}
+                    <tr>{{value}}</tr>
+                {{/each}}
+            </td>
+        </table>
     {{/with}}
 </template>
