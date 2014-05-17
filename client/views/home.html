@@ -17,38 +17,154 @@
 			<p>The Society of St. William</p>
 		</div>
 
-		<div class="container text-center" style="padding-left:100px; padding-right:100px;">
+		<div class="container text-center" style="padding-left:100px; padding-right:100px; padding-bottom:200px;">
 
 			<blockquote>
 				“The first thing you need in matters of this kind, as every general knows, is a thorough knowledge of the terrain.  Not know the terrain, and where are you?  Look at Napoleon and that sunken road at Waterloo.  Silly ass!” 
-				<footer>Bertie Wooster<cite title="Very Good, Jeeves">Very Good, Jeeves</cite></footer>
+				<footer>Bertie Wooster</footer>
 			</blockquote>
+		</div>
+
+		<div class="container">
+			<h2>
+				Introduction
+			</h2>
+			<p>
+				This game reflects my longstanding objections to much of the academic literature in international relations: the models inadequately deal with differing requirements for domestic politics, struggle to reflect the complexity of relationships between many different countries, and often ignore the influence of tactical requirements on strategic considerations.  I have kicked around some of the theoretical ideas included in this game for some time; Tom and I attended an IR lecture at Caltech maybe five years ago that greatly aggravated me (“how can you have a model of international relations that contains only two countries!”) and provided some impetus to think formally about these types of problems.
+			</p>
+			<p>
+				With this new edition, as with its predecessors, I attempt to present a model of warfare and international relations that satisfies my own theoretical objections.  Board Game Conference I, II, and III all carried forward my initial idea, translated into a game concept, with some alterations intended to increase “playability.”  While this game addresses those same ideas, I have changed many of the original fundamental building blocks.  I thought it might be helpful to explain here some of the key differences so that players with previous experience can read the rules with a broader sense of purpose.  
+			</p>
+			<p>
+				The original game, and its subsequent variants, had a few ‘core components.’  These were, in my view:
+				<ol>
+					<li>A hex-based map structure</li>
+					<li>A year-long strategic component and four seasonal tactical components</li>
+					<li>A combat system that completely divorced the outcomes of spatial victory and the probability of unit loss (i.e. the probabilities were related but the draws were independent)</li>
+					<li>Air combat tethered to the land/sea map structure</li>
+					<li>A simple model of politics that involved inefficient use of resources in order to avoid periodic negative shocks</li>
+					<li>Payoffs determined entirely by relative position at the end of the game</li>
+				</ol>
+			</p>
+			<p>
+				I think I had good theoretical reasons for all of these.  Nevertheless, these components combined together tended to produce a game that, if not completely unplayable, was too long, not very enjoyable to play, and mentally exhausting.  Players had to spend so much time dealing with all of the computational components that they had too little time for ‘grand strategy.’  With some very helpful suggestions from others in the Society of St. William, and some re-thinking on my part, I have developed a new set of rules.  I have altered every one of those ‘core components.’  It’s practically an entirely different game but one built on the lessons of the past.
+			</p>
+			<p>
+				The new game abandons the hex-based map structure.  The last map was 20x20 hexes — 400 overall, with about 300 land-hexes.  A typical “large” country would have about 40 hexes in it.  New map variants will no longer be hex-based.  The territories may attach in other interesting ways – for example, a flat open plain may be modeled as just a single large territory connecting to maybe even eight other territories.  The precise map will dictate how that all works out.  The rules, though, are written with some size notions in mind: a large country will have perhaps fifteen to twenty territories.  There will still be ‘economic zones’ that group these together but the value of those zones will not depend on their number of hexes.  In effect, the “world” will be modeled at a higher level of aggregation, with about half the number of land territories as on the previous maps.  
+			</p>
+			<p>
+				The larger map territories also allow for a change in the turn structure.  Instead of having four combat seasons, the game will now have only three.  Note that with the map-size change, units may actually move farther per year, even though they will only get three chances to move instead of four.  Additionally, the previous edition started the ‘random end’ procedure starting at turn 10, but with a guarantee of at least 13 turns.  Now the random end procedure will begin at turn 10 and have the ability to terminate the game immediately.  That is still ensuring that each game will include at least 30 combat seasons – compared to, say, 10 from a full round of Game of Thrones.
+			</p>
+			<p>
+				Nothing generated more controversy in the previous editions than the combat system.  Essentially, it did not operate as players expected; it was difficult to compute the expected losses; and players faced a trade-off between efficiency and efficacy that did not always make sense.  While the players lose some tactical flexibility due to the reduction in the number of land spaces on the board, they regain it through the availability of new order types that reflect their intentions.  Furthermore, the probability of victory and the probability you impose losses on the enemy are now more closely related.
+			</p>
+			<p>
+				Air combat will work completely differently than it did in earlier games.  Essentially, air power will serve as a modifier in all the territories in the “air zones” in which it is deployed.  In resolving conflict during a fighting season, first players will determine who has control of the air in which zones and then move on to resolving combats.  While this does add time to combat resolution, it should dramatically shorten the complexity of the order-writing and more seamlessly integrate economic warfare (strategic bombing) with territorial warfare.  As I think appropriate for the period (roughly, 1920-1950) modeled, air power should play a large role and players will focus on gaining ‘air supremacy’ over large areas.
+			</p>
+			<p>
+				Players will also get more out of politics.  Players will still spend at a few different levels (10% increments of their GDP) on politics and receive outcomes at the end of the year.  Players will now draw from a deck of cards (the 10% deck, for example) and obtain their outcome.  Not all the outcomes will be bad.  Some may contain bonuses.  Others will contain restrictions, conditional rewards, and so on.  It will still be true that the more you spend the more likely you will be to obtain a good outcome.  The outcomes will vary by regime type (players will pick “dictatorship” or “democracy”) and the two types will pick from different decks.  The dictatorship deck focuses more on issues of stability and control.  The democracy deck focuses more on freedom of tactical and strategic choice.  Additionally, political spending generates “in-game cash.”  The more you spend on politics, the more in-game cash you generate each turn. 
+			</p>
+			<p>
+				The “in-game cash” changes both the ability of players to buy-and-trade in-game objects as well as the way players collect payoffs at the end of the game.  Your payoff at the end of the game is now a function of how much in-game cash you acquired.  The last turn will generate a large payout of in-game cash based on the final position of the board, so it will still be true that players will want to end in as strong of a position as they can.  Nevertheless, actions throughout the game will contribute to the final score.  This deserves a longer theoretical explanation (rather than just a mechanical one, as I will present in the rest of the rules).  I think the in-game cash will solve two major problems with previous editions of the game. 
+			</p>
+			<p>
+				First, the in-game cash provides a measure of whole-game performance.  I want a model where players behave as if they were previously infinitely-lived and that they will be infinitely-lived into the future.  While that is obviously not possible in a board game, I can at least try to smooth out the game-ending distortions.  Providing a real payoff for “we had a good year this year” gets part of the way towards that outcome.  With the in-game cash, a player can “turtle” and develop and… actually have a relatively successful game.  The player can also use that cash to do, in effect, ‘soft’ foreign policy.
+			</p>
+			<p>
+				Second, the in-game cash solves the “buyout” problem.  Each country should only possess some amount of real capabilities to pay off the leaders of other nations.  In older versions of the game, a player had in essence no budget constraint: Belgium could offer enough money to the leaders of Germany, France, England, and Russia to literally buy them all simultaneously.  With transactions limited to in-game cash, players in the early game may only be able to buy very small objects (say, a handful of supplies) because they simply do not have the cash to reach the expected payoff value of any country – what they would need to buy the whole country.  Later in the game, a player may have accumulated enough cash to buy out one or even two players – but it is very unlikely that someone will have acquired enough cash to buy out the whole table by turn 6.
+			</p>
+			<p>
+				So, as you see, most of the game has changed.  All of those ‘core concepts’ no longer apply.  I think the new game will actually be a better model of what I had in mind, though.  I don’t view these as ‘sacrifices for playability.’  The new game sounds to me like it should be more fun and a better simulation.  I hope that after you read the new rules in this document that you will be as excited to play the new game as I am.
+				<footer class="text-right">J. Andrew Sinclair</footer>
+				<footer class="text-right">17 March 2014</footer>
+			</p>
+			<h2>
+				The Board
+			</h2>
+			<p>
+				The game board in this edition contains several different types of boundaries and two terrain types: land and sea territories.  Additionally, there are some modifiers that apply to certain territories that give them special properties: cities, ports, railroads, mountains, major rivers, shoreline, and canals.  Sea territories are relatively large compared to land territories and also have slightly different properties as well.
+			</p>
+			<p>
+				These are the boundary types:
+				<ul>
+					<li>Air Zones: this is the level of aggregation at which air combat takes place.</li>
+					<li>Economic Zones: these are collections of land (plain and mountain) territories; economic development takes place at the zone level rather than at the territory level.</li>
+					<li>National Borders: these define the areas possessed by each nation at the beginning of the game and may cut across air and economic zones.</li>
+				</ul>
+			</p>
+			<p>
+				The game board will be divided up into some number of countries (generally about twelve, although there may be other map variants used).  Half of these will be “large” countries that contain something on the order of 12-18 land territories.  The other half will be “small” countries that have between 5-8 land territories.  For the sake of playability, depending on the number of participants, some of the small countries may be joined together before the country selection process begins.  Not all countries need to be claimed for the game to operate; these rules contain extensive provisions for neutral countries.
+			</p>
+			<p>
+				While the exact details will vary by country and by map, generally each economic zone will contain 4-6 land territories.  Players either have “full”, “partial,” or “no” control over an economic zone.  To have full control, a player must possess all of the land territories in that zone.  To have partial control, the player must possess at least 51% of the land territories.  Not all zones will necessarily be controlled by a player at all times; furthermore, players typically will begin with partial control over some zones rather than full control.
+			</p>
+			<p>
+				Air zones have their own borders and may include both sea and land territories.  These represent areas in which the players may contend for air control.  Air control works very differently in this version of the game than in the previous variants.  The player with air supremacy may then apply a modifier to every (land and sea) territory in that air zone. 
+			</p>
+			<p>
+				These are the territory modifiers:
+				<ul>
+					<li>Cities:  These are your production centers; they produce land units, air units, and supplies.  Additionally, territories with cities get a defensive bonus (for a list of bonuses, see the combat section).</li>
+					<li>Ports:  Ports are just cities that can also build ships.  They too have a defensive bonus.</li>
+					<li>Railroads:  Railroads allow you to move units more quickly around the map.  Railroads are owned by the player owning the land territory.  For operational details, see the section on military orders and movement.</li>
+					<li>Mountains:  Mountains provide a defensive bonus (see the bonus list in the combat section).</li>
+					<li>Rivers:  Rivers provide a directional defensive bonus that applies against an army attacking over the river.</li>
+					<li>Shoreline: Shoreline provides a directional defensive bonus against a landing army.</li>
+					<li>Canals:  Canals provide the river directional defensive bonus and act as a “ship railroad.”  As long as a player possesses (or obtains permission from the owner of) the canal, the player may pass ships through it from one sea territory to another.</li>
+				</ul>
+			</p>
+			<p>
+				The territory modifiers work together and generate what I view as the appropriate ‘defense-offense’ balance.  The attacker has the advantage of choosing the place and concentrating their forces; the defense gains advantages from the terrain, short supply lines, and interior supply lines.  Each of these types of terrain modifiers will be discussed more extensively in the section of the rules which their modifications affect.
+			</p>
+			<h2>
+				The Turn
+			</h2>
+			<p>
+				Each turn consists of three phases: allocation, combat, and reconciliation.  During the allocation phase, players place orders for how to use their GDP.  The combat phase involves moving units in each of the three seasons: spring, fall, and winter.  In the reconciliation phase players obtain political outcomes, receive production ordered during the allocation phase, and may buy or sell objects using the “in-game cash.”
+			</p>
+			<h3>
+				Allocation
+			</h3>
+			<p>
+				In the allocation phase, players take their total GDP and use it to purchase several different types of goods.  You may not “roll-over” GDP into the future: productive capacity not used is lost.  Additionally, you may not buy, sell, or trade GDP.  Here is the list of all the types of items players may purchase with their GDP:
+				<ul>
+					<li>Politics.  This is done in four increments: 0%, 10%, 20%, 30% of GDP.  Your political spending will also affect your income in Francs.  See the detailed section on politics and in-game cash later in the rulebook.  You do not need to specify a place with this purchase; it occurs entirely off-board.</li>
+					<li>GDP development.  You must assign this to particular economic zones.  As you buy more, it becomes more expensive.</li>
+					<li>Atomic research.  At the end of the game, you will have a probability of developing the bomb based on the share of the world’s atomic research you possess.  Atomic research gets more expensive as the game progresses.  You do not need to specify a particular place to produce the atomic research.</li>
+					<li>Military Units and Supplies.  You may purchase: aircraft, infantry, armor, light fleets, heavy fleets, and supplies.  All of these must be assigned to a city or port for production.  Prices and capabilities will be listed elsewhere.</li>
+				</ul>
+			</p>
+			<p>
+				Each player prepares their allocation simultaneously.  Allocations are private knowledge until the reconciliation phase, at which point all aspects of the allocation are revealed.  The allocation phase will take place with a strict time limit; all players must complete their allocation within that amount of time and submit it via whatever process the players have agreed to in advance.
+			</p>
+			<h3>
+				Combat
+			</h3>
+			<p>
+				Each combat season – Spring, Fall, Winter – has its own simultaneously executed parts.  Players write orders, submit them before a time limit, and then some player will read and execute the orders.  Within order resolution, air combat takes place first, sea combat next, ground combat last, and then any further air casualties are removed.  Players will typically have a short period of time (perhaps seven or eight minutes) to write their orders.  After the three combat seasons are complete, the reconciliation phase begins.
+			</p>
+			<h3>
+				Reconciliation
+			</h3>
+			<p>
+				The reconciliation phase does not include any strategic elements.  Players first draw their political fate from the politics card decks.  Next they place the units and supplies that they ordered, update their GDP, and record their atomic research.  Last, players may buy and sell objects using their available budget in Francs.
+			</p>
+			<h2>
+				Combat
+			</h2>
+			<p>
+				The game uses a mixed combat system: while it has random components, the outcomes are not wholly random.  It is possible, for example, for one force of very great size to defeat a force of very small size with complete certainty.  Nevertheless, the ‘random’ components will still be quite meaningful, both for the casualties taken by each side and the ultimate control of land territories.  Territorial control and casualties are computed separately.  These next paragraphs describe the system in general; subsequently, I will note the (many) special rules.
+			</p>
+			<p>
+				Units have “combat values” (infantry and armor have different values for attack and defense, as well).  In a combat, each player sums up the combat value of their participating units to generate their base value (e.g., “I have a value of 11.”).  The basic principle is if I have a higher total value than you do (e.g., “11>6”) then I win control over the territory.  Ties go to the defender.  The non-random component of combat comes from these “base values.”  If my force is worth more than yours, I have a higher base value, and an advantage in combat.
+			</p>
+			<p>
+				The random component builds on top of the base value through “combat cards;” the combat cards also determine casualties.  When you draw a combat card, you will see three parts: (1) a number between 0 and 3 that will be added to your base combat value and (2) numbered rows indicating the number of types of casualties you inflict on your enemy and (3) a flak indicator for whether the combat destroyed any of your enemy’s aircraft in the covering air zone.
+			</p>
 		</div>
 <!-- 
 
-
-
-
-
-Version: 17 March 2014
-
-
-
-Introduction
-
-	This game reflects my longstanding objections to much of the academic literature in international relations: the models inadequately deal with differing requirements for domestic politics, struggle to reflect the complexity of relationships between many different countries, and often ignore the influence of tactical requirements on strategic considerations.  I have kicked around some of the theoretical ideas included in this game for some time; Tom and I attended an IR lecture at Caltech maybe five years ago that greatly aggravated me (“how can you have a model of international relations that contains only two countries!”) and provided some impetus to think formally about these types of problems.
-	With this new edition, as with its predecessors, I attempt to present a model of warfare and international relations that satisfies my own theoretical objections.  Board Game Conference I, II, and III all carried forward my initial idea, translated into a game concept, with some alterations intended to increase “playability.”  While this game addresses those same ideas, I have changed many of the original fundamental building blocks.  I thought it might be helpful to explain here some of the key differences so that players with previous experience can read the rules with a broader sense of purpose.  
-	The original game, and its subsequent variants, had a few ‘core components.’  These were, in my view:
-A hex-based map structure;
-A year-long strategic component and four seasonal tactical components;
-A combat system that completely divorced the outcomes of spatial victory and the probability of unit loss (i.e. the probabilities were related but the draws were independent);
-Air combat tethered to the land/sea map structure; 
-A simple model of politics that involved inefficient use of resources in order to avoid periodic negative shocks;
-Payoffs determined entirely by relative position at the end of the game.
-I think I had good theoretical reasons for all of these.  Nevertheless, these components combined together tended to produce a game that, if not completely unplayable, was too long, not very enjoyable to play, and mentally exhausting.  Players had to spend so much time dealing with all of the computational components that they had too little time for ‘grand strategy.’  With some very helpful suggestions from others in the Society of St. William, and some re-thinking on my part, I have developed a new set of rules.  I have altered every one of those ‘core components.’  It’s practically an entirely different game but one built on the lessons of the past.
-	The new game abandons the hex-based map structure.  The last map was 20x20 hexes - 400 overall, with about 300 land-hexes.  A typical “large” country would have about 40 hexes in it.  New map variants will no longer be hex-based.  The territories may attach in other interesting ways – for example, a flat open plain may be modeled as just a single large territory connecting to maybe even eight other territories.  The precise map will dictate how that all works out.  The rules, though, are written with some size notions in mind: a large country will have perhaps fifteen to twenty territories.  There will still be ‘economic zones’ that group these together but the value of those zones will not depend on their number of hexes.  In effect, the “world” will be modeled at a higher level of aggregation, with about half the number of land territories as on the previous maps.  
-	The larger map territories also allow for a change in the turn structure.  Instead of having four combat seasons, the game will now have only three.  Note that with the map-size change, units may actually move farther per year, even though they will only get three chances to move instead of four.  Additionally, the previous edition started the ‘random end’ procedure starting at turn 10, but with a guarantee of at least 13 turns.  Now the random end procedure will begin at turn 10 and have the ability to terminate the game immediately.  That is still ensuring that each game will include at least 30 combat seasons – compared to, say, 10 from a full round of Game of Thrones.  
-	Nothing generated more controversy in the previous editions than the combat system.  Essentially, it did not operate as players expected; it was difficult to compute the expected losses; and players faced a trade-off between efficiency and efficacy that did not always make sense.  While the players lose some tactical flexibility due to the reduction in the number of land spaces on the board, they regain it through the availability of new order types that reflect their intentions.  Furthermore, the probability of victory and the probability you impose losses on the enemy are now more closely related.      
+     
 	Air combat will work completely differently than it did in earlier games.  Essentially, air power will serve as a modifier in all the territories in the “air zones” in which it is deployed.  In resolving conflict during a fighting season, first players will determine who has control of the air in which zones and then move on to resolving combats.  While this does add time to combat resolution, it should dramatically shorten the complexity of the order-writing and more seamlessly integrate economic warfare (strategic bombing) with territorial warfare.  As I think appropriate for the period (roughly, 1920-1950) modeled, air power should play a large role and players will focus on gaining ‘air supremacy’ over large areas.
 	Players will also get more out of politics.  Players will still spend at a few different levels (10% increments of their GDP) on politics and receive outcomes at the end of the year.  Players will now draw from a deck of cards (the 10% deck, for example) and obtain their outcome.  Not all the outcomes will be bad.  Some may contain bonuses.  Others will contain restrictions, conditional rewards, and so on.  It will still be true that the more you spend the more likely you will be to obtain a good outcome.  The outcomes will vary by regime type (players will pick “dictatorship” or “democracy”) and the two types will pick from different decks.  The dictatorship deck focuses more on issues of stability and control.  The democracy deck focuses more on freedom of tactical and strategic choice.  Additionally, political spending generates “in-game cash.”  The more you spend on politics, the more in-game cash you generate each turn.  
 	The “in-game cash” changes both the ability of players to buy-and-trade in-game objects as well as the way players collect payoffs at the end of the game.  Your payoff at the end of the game is now a function of how much in-game cash you acquired.  The last turn will generate a large payout of in-game cash based on the final position of the board, so it will still be true that players will want to end in as strong of a position as they can.  Nevertheless, actions throughout the game will contribute to the final score.  This deserves a longer theoretical explanation (rather than just a mechanical one, as I will present in the rest of the rules).  I think the in-game cash will solve two major problems with previous editions of the game.  
