@@ -1,26 +1,31 @@
-// Session.setDefault("battle", {
-//     'defending': emptyArmy(),
-//     'attacking': emptyArmy()
-// })
 computeBattle = function(battle) {
     // console.log(battle)
     // attacking/defending, supplied/unsupplied
 
     // total defensive strength, total attacking strength, (TODO: modifiers), call attackSuccess
 
-    console.log('battle begins')
-    console.log(battle)
-    computeWin(battle)
-    computeCasualties(battle)
+    // console.log('battle begins')
+    // console.log(battle)
+
+    data = {}
+
+    data.winner = computeWin(battle)
+    _.extend(data, computeCasualties(battle))
+
+    console.log(data)
+    return data
 }
-
-
 
 AutoForm.hooks({
     battle: {
         onSubmit: function(battle) {
-            computeBattle(battle)
-            console.log('stop')
+            try {
+                data = computeBattle(battle)
+                Session.set("battleOutcomeData", data)
+                Router.go('battleOutcome')
+            } catch (err) {
+                console.log(err.stack)
+            }
             // return false to prevent POST request
             return false;
         }
@@ -36,11 +41,12 @@ AutoForm.hooks({
 computeWin = function(battle) {
     defensiveStrength = armyValue(battle.defending, 'defense')
     attackingStrength = armyValue(battle.attacking, 'attack')
-    console.log('defensive strength:', defensiveStrength)
-    console.log('attacking strength:', attackingStrength)
+    // console.log('defensive strength:', defensiveStrength)
+    // console.log('attacking strength:', attackingStrength)
 
     success = attackSuccess(attackingStrength, defensiveStrength)
-    success ? console.log("the attack succeeded") : console.log("the defense succeeded")
+    // success ? console.log("the attack succeeded") : console.log("the defense succeeded")
+    return success ? "ATTACK WINS" : "DEFENSE WINS"
 }
 
 computeCasualties = function(battle) {
@@ -62,23 +68,29 @@ computeCasualties = function(battle) {
 
     defendingArmyList = armyToList(battle.defending)
     attackingArmyList = armyToList(battle.attacking)
-    console.log("initial defensive army:", defendingArmyList)
-    console.log("initial attacking army:", attackingArmyList)
+    // console.log("initial defensive army:", defendingArmyList)
+    // console.log("initial attacking army:", attackingArmyList)
 
     defensiveKills = armyKills(battle.defending, 'defense')
     attackingKills = armyKills(battle.attacking, 'attack')
 
     defendingCasualties = _.sample(defendingArmyList, attackingKills)
     attackingCasualties = _.sample(attackingArmyList, defensiveKills)
-    console.log("defensive kills:", defensiveKills)
-    console.log("defensive casualties:", defendingCasualties)
-    console.log("attacking kills:", attackingKills)
-    console.log("attacking casualties:", attackingCasualties)
+    // console.log("defensive kills:", defensiveKills)
+    // console.log("defensive casualties:", defendingCasualties)
+    // console.log("attacking kills:", attackingKills)
+    // console.log("attacking casualties:", attackingCasualties)
 
     removeOneEachFromList(defendingArmyList, defendingCasualties)
     removeOneEachFromList(attackingArmyList, attackingCasualties)
 
-    console.log("remaining defensive army:", defendingArmyList)
-    console.log("remaining attacking army:", attackingArmyList)
+    // console.log("remaining defensive army:", defendingArmyList)
+    // console.log("remaining attacking army:", attackingArmyList)
 
+    return {
+        casualties: {
+            defending: mergeSuppliedAndUnsupplied(listToArmy(defendingCasualties)),
+            attacking: mergeSuppliedAndUnsupplied(listToArmy(attackingCasualties))
+        }
+    }
 }

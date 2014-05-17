@@ -59,24 +59,25 @@ armyToList = function(army) {
     return armyList
 }
 
-listToArmy = function(list) {
-    army = emptyArmy()
-    list.forEach(function(unit, index, array) {
-        keys = unit.split(' ')
-        army[keys[0]][keys[1]] += 1
-    })
-    return army
-}
-
 emptyArmy = function() {
     army = {
         supplied: {},
         unsupplied: {}
     }
-    ['supplied', 'unsupplied'].forEach(function(supply, index, array) {
+    s = ['supplied', 'unsupplied']
+    s.forEach(function(supply, index, array) {
         unitTypes.forEach(function(unitType, index, array) {
             army[supply][unitType] = 0
         })
+    })
+    return army
+}
+
+listToArmy = function(list) {
+    army = emptyArmy()
+    list.forEach(function(unit, index, array) {
+        keys = unit.split(' ')
+        army[keys[0]][keys[1]] += 1
     })
     return army
 }
@@ -90,3 +91,29 @@ removeOneEachFromList = function(list, values) {
         list.splice(_.indexOf(list, value), 1)
     })
 }
+
+mergeSuppliedAndUnsupplied = function(army) {
+    merged = {}
+
+    unitTypes.forEach(function(unitType, index, array) {
+        merged[unitType] = army.supplied[unitType] + army.unsupplied[unitType]
+    })
+
+    return merged
+}
+
+UI.registerHelper('sessionVar', function(string) {
+    return Session.get(string)
+})
+
+
+UI.registerHelper('keyValue', function(context, options) {
+    var result = [];
+    _.each(context, function(value, key, list) {
+        result.push({
+            key: key,
+            value: value
+        });
+    })
+    return result;
+});
