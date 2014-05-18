@@ -84,10 +84,18 @@ Template.battle.events({
 
 
             for (var i = 0; i < attack.supplied.aircraft; i++) {
-                attackAirKills += binarySample(airKillOdds) ? 1 : 0
+                kill = true
+                while (kill) {
+                    kill = binarySample(airKillOdds) ? 1 : 0
+                    attackAirKills += kill
+                }
             }
             for (var i = 0; i < defense.supplied.aircraft; i++) {
-                defenseAirKills += binarySample(airKillOdds) ? 1 : 0
+                kill = true
+                while (kill) {
+                    kill = binarySample(airKillOdds) ? 1 : 0
+                    defenseAirKills += kill
+                }
             }
 
             console.log("attack airplane kills:", attackAirKills)
@@ -203,10 +211,18 @@ Template.battle.events({
         attackKills = 0
 
         for (var i = 0; i < defenseUnits; i++) {
-            defenseKills += binarySample(defenseProb) ? 1 : 0
+            kill = true
+            while (kill) {
+                kill = binarySample(defenseProb) ? 1 : 0
+                defenseKills += kill
+            }
         };
         for (var i = 0; i < attackUnits; i++) {
-            attackKills += binarySample(attackProb) ? 1 : 0
+            kill = true
+            while (kill) {
+                kill = binarySample(attackProb) ? 1 : 0
+                attackKills += kill
+            }
         };
 
         console.log("defense killed", defenseKills)
