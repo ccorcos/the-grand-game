@@ -1,10 +1,10 @@
 Router.map(function() {
-    this.route('battleForm', {
+    this.route('battle', {
         path: '/'
     })
-    this.route('battleOutcome')
-    this.route('battleStats')
     this.route('home')
+    this.route('politics')
+    this.route('random')
 });
 
 Router.configure({

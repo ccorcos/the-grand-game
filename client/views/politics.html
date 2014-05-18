@@ -1,0 +1,29 @@
+<template name="politics">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Politics</h2>
+            <h3>Government</h3>
+                <input type="radio" name="government" value="democracy"> Democracy<br>
+                <input type="radio" name="government" value="dictatorship"> Dictatorship<br>
+            <h3>Investment</h3>
+                <input type="radio" name="investment" value="0"> 0%<br>
+                <input type="radio" name="investment" value="10"> 10%<br>
+                <input type="radio" name="investment" value="20"> 20%<br>
+                <input type="radio" name="investment" value="30"> 30%<br>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="middle"><button class="btn" id="draw">Submit</button></div>
+        </div>
+    </div>
+
+    {{#if sessionVar 'card'}}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="middle"><h2>Politics</h2><p>{{sessionVar 'card'}}</p></div>
+        </div>
+    </div>
+    {{/if}}
+</template>

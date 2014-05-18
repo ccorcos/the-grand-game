@@ -1,0 +1,111 @@
+<template name="battle">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="middle">
+                
+            
+            <h2>Attacking</h2>
+            <h3>Supplied</h3>
+            <table class="middle">
+                {{#each unitType}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='number' class="attacking supplied battle army {{this}}" name="{{this}}"  min="0" value="0"></td>
+                    </tr>
+                {{/each}}
+            </table>
+            <h3>Unsupplied</h3>
+            <table class="middle">
+                {{#each unitType}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='number' class="attacking unsupplied battle army {{this}}" name="{{this}}"  min="0" value="0"></td>
+                    </tr>
+                {{/each}}
+            </table>
+            <h3>Attacking Modifiers</h3>
+            <table class="middle">
+                {{#each attackingModifiers}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='checkbox' class="attacking battle modifiers {{this}}" name="{{this}}"></td>
+                    </tr>
+                {{/each}}
+            </table>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="middle">
+                
+            
+            <h2>Defending</h2>
+            <h3>Supplied</h3>
+            <table class="middle">
+                {{#each unitType}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='number' class="defending supplied battle army {{this}}" name="{{this}}"  min="0" value="0"></td>
+                    </tr>
+                {{/each}}
+            </table>
+            <h3>Unsupplied</h3>
+            <table class="middle">
+                {{#each unitType}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='number' class="defending unsupplied battle army {{this}}" name="{{this}}"  min="0" value="0"></td>
+                    </tr>
+                {{/each}}
+            </table>
+            <h3>Defending Modifiers</h3>
+            <table class="middle">
+                {{#each defendingModifiers}}
+                    <tr class="table-row">
+                        <td class="table-col">{{this}}:</td>
+                        <td class="table-col"><input type='checkbox' class="defending battle modifiers {{this}}" name="{{this}}"></td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="middle"><button class="btn" id="fight">Fight</button></div>
+        </div>
+    </div>
+
+    {{#if sessionVar 'winner'}}
+        {{>outcome}}
+    {{/if}}
+    
+</template>
+
+<template name="outcome">
+    <div class="row">
+        <h2>Narrative</h2>
+        <ul>
+            {{#each sessionVar 'narrative'}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <h2>Result</h2>
+        <h3>{{sessionVar 'winner'}}</h3>
+        <div class="col-md-3">
+            <h4>Attack Losses</h4>
+            <ul>
+                {{#each sessionVar 'attackLosses'}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>Defense Losses</h4>
+            <ul>
+                {{#each sessionVar 'defenseLosses'}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>

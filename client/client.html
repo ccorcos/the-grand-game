@@ -18,3 +18,12 @@
 <template name="loading">
     Loading...
 </template>
+
+<template name="random">
+    <h2>Generate A Random Number</h2>
+    <p>min: <input type='number' class="min rand" name="min" value="0"></p>
+    <p>max: <input type='number' class="max rand" name="min" value="6"></p>
+    <p><button class="btn" id="roll">Roll</button></p>
+    <h3>Result</h3>
+    <p>{{sessionVar 'random'}}</p>
+</template>
