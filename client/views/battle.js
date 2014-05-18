@@ -2,7 +2,7 @@
 
 unitTypes = ['infantry', 'armor', 'lightFleet', 'heavyFleet', 'aircraft']
 attackingModifiers = []
-defendingModifiers = ['river', 'city', 'mountains']
+defendingModifiers = ['river', 'city', 'mountains', 'winter']
 
 
 Template.battle.unitType = function() {
@@ -32,20 +32,32 @@ Template.battle.events({
         defense.supplied = {}
         defense.unsupplied = {}
         unitTypes.forEach(function(value, index, array) {
-            attack.supplied[value] = parseInt($('.attacking.supplied.' + value)[0].value)
-            attackList.push(value)
+            n = parseInt($('.attacking.supplied.' + value)[0].value)
+            attack.supplied[value] = n
+            for (var i = 0; i < n; i++) {
+                attackList.push(value)
+            };
         })
         unitTypes.forEach(function(value, index, array) {
-            attack.unsupplied[value] = parseInt($('.attacking.unsupplied.' + value)[0].value)
-            attackList.push(value)
+            n = parseInt($('.attacking.unsupplied.' + value)[0].value)
+            attack.unsupplied[value] = n
+            for (var i = 0; i < n; i++) {
+                attackList.push(value)
+            };
         })
         unitTypes.forEach(function(value, index, array) {
-            defense.supplied[value] = parseInt($('.defending.supplied.' + value)[0].value)
-            defenseList.push(value)
+            n = parseInt($('.defending.supplied.' + value)[0].value)
+            defense.supplied[value] = n
+            for (var i = 0; i < n; i++) {
+                defenseList.push(value)
+            };
         })
         unitTypes.forEach(function(value, index, array) {
-            defense.unsupplied[value] = parseInt($('.defending.unsupplied.' + value)[0].value)
-            defenseList.push(value)
+            n = parseInt($('.defending.unsupplied.' + value)[0].value)
+            defense.unsupplied[value] = n
+            for (var i = 0; i < n; i++) {
+                defenseList.push(value)
+            };
         })
         console.log("attacking army:", attack)
         console.log("defending army:", defense)
@@ -59,6 +71,9 @@ Template.battle.events({
 
         attackMods = {}
         defenseMods = {}
+
+        defenseStrength = 0
+        attackStrength = 0
 
         if (attack.supplied.aircraft != 0 && defense.supplied.aircraft != 0) {
             console.log("both armies have aircraft")
@@ -90,21 +105,21 @@ Template.battle.events({
             console.log("defense have", defense.supplied.aircraft, "aircraft")
             if (attack.supplied.aircraft > defense.supplied.aircraft) {
                 narrative.push('Air battle - attack have air superiority ' + (attack.supplied.aircraft - defense.supplied.aircraft))
-                attackMods.air = attack.supplied.aircraft - defense.supplied.aircraft
+                attackStrength += attack.supplied.aircraft - defense.supplied.aircraft
             } else if (attack.supplied.aircraft < defense.supplied.aircraft) {
                 narrative.push('Air battle - defense have air superiority ' + (defense.supplied.aircraft - attack.supplied.aircraft))
-                defenseMods.air = defense.supplied.aircraft - attack.supplied.aircraft
+                defenseStrength += defense.supplied.aircraft - attack.supplied.aircraft
             } else {
                 narrative.push('Air battle - air forces mutually destroyed')
             }
         } else if (attack.supplied.aircraft != 0) {
             console.log("attack have air superiority with", attack.supplied.aircraft, "aircraft")
             narrative.push('Air battle - attack have air superiority ' + attack.supplied.aircraft)
-            attackMods.air = attack.supplied.aircraft
+            attackStrength += attack.supplied.aircraft
         } else if (defense.supplied.aircraft != 0) {
             console.log("defense have air superiority with", defense.supplied.aircraft, "aircraft")
             narrative.push('Air battle - defense have air superiority ' + defense.supplied.aircraft)
-            defenseMods.air = defense.supplied.aircraft
+            defenseStrength += defense.supplied.aircraft
         } else {
             console.log("no air battle, no air superiority")
         }
@@ -140,8 +155,7 @@ Template.battle.events({
         console.log("attacking mod total:", sumAttackMods)
         console.log("defending mod total:", sumDefenseMods)
 
-        defenseStrength = 0
-        attackStrength = 0
+
         attackUnits = 0
         defenseUnits = 0
 
